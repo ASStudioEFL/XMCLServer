@@ -1,60 +1,14 @@
-<h1>XMCL 0.7.1.ALPHA 内测版</h1>
-<ul>
-  <li>启动器
-    <ul>
-      <li>修改界面</li>
-      <li>更新俄语翻译</li>
-      <li>改善游戏下载速度</li>
-      <li>添加复制游戏实例功能</li>
-      <li>添加清理缓存文件夹按钮</li>
-      <li>修改默认下载源为 MCBBS</li>
-      <li>提升与 ServerSync 的兼容性</li>
-      <li>添加为正版账号上传皮肤的功能</li>
-      <li>支持调整并记住启动器窗口大小</li>
-      <li>在日志窗口添加导出游戏日志功能</li>
-      <li>现在会校验资源索引文件的完整性</li>
-      <li>现在启动器代理设置对启动后的游戏有效</li>
-      <li>在启动游戏、安装游戏等界面显示总下载速度</li>
-      <li>游戏崩溃后显示游戏崩溃报告而不是游戏日志</li>
-      <li>允许在启动游戏按钮上滑动鼠标滚轮切换游戏</li>
-      <li>在删除 Mod、世界、数据包时弹出删除确认提示</li>
-      <li>允许使用在启动器同目录下的 authlib-injector.jar 文件</li>
-      <li>在游戏崩溃后的第二次启动时自动检查资源和支持库文件是否完整</li>
-      <li>添加启动器的 JVM 参数 -Dhmcl.font.override=fontfamily 以允许 Linux 用户更换字体以解决白屏问题</li>
-      <li>修复部分整合包无法修改启动时游戏窗口大小的问题</li>
-      <li>修复终止游戏后启动器不会停止等待的问题</li>
-      <li>修复 1.5.2 及以下版本不能下载资源文件的问题</li>
-      <li>修复某些情况下启动游戏时，启动器会崩溃的问题</li>
-      <li>修复进入游戏设置后无法重命名部分游戏版本的问题</li>
-      <li>修复不能在 Java 17 下载 Forge 和自动更新的问题</li>
-      <li>修复重命名版本时，输入不合法的新名字后的错误提示</li>
-      <li>修复重命名被依赖的版本后，会破坏其他依赖这个版本的版本的问题</li>
-      <li>修复在自定义游戏运行目录时，输入不合法的路径会导致崩溃的问题</li>
-      <li>修复在输入特定错误的 authlib-injector 服务器地址时会导致启动器崩溃的问题</li>
-      <li>增加TDS系统</li>
-    </ul>
-  </li>
-  <li>自动安装
-    <ul>
-      <li>在 OptiFine 库缺失时可以自动补全</li>
-      <li>提升自动安装功能与其他启动器的兼容性</li>
-      <li>在当前下载源下载失败后自动重试其他下载源</li>
-      <li>在启动游戏、安装游戏等界面显示明确的安装步骤</li>
-      <li>安装游戏向导内可直接切换下载源，而不需要返回启动器设置页面</li>
-      <li>支持同时安装 Minecraft 1.14.4 及以上版本的 Forge 和 OptiFine</li>
-      <li>自动安装页面将提示不兼容的第三方库，比如 Forge 和 Fabric 不兼容</li>
-      <li>修复无法安装 Forge 1.12.2 2852 的问题</li>
-      <li>修复在 Curse 整合包安装遗漏部分 Mod 的问题</li>
-      <li>修复在 Curse 整合包安装部分成功时删除游戏的问题</li>
-      <li>修复 1.5.2 及以下版本安装 Forge 后启动失败的问题</li>
-      <li>修复从 MCBBS 下载源下载文件可能会下载到空文件的问题</li>
-      <li>修复 1.12.2 同时安装 Forge, OptiFine 时无法进入游戏存档的问题</li>
-    </ul>
-  </li>
-  <li>整合包
-    <ul>
-      <li>修复整合包配置丢失后整合包游戏版本不能修改配置的问题</li>
-      <li>修复服务器自动更新整合包更新时可能会出现 AccessDeniedException 的问题</li>
-    </ul>
-  </li>
-</ul>
+<h1 id="0-7-1-alpha">0.7.1.ALPHA</h1>
+
+  <h3 id="update-system">Update System</h3>
+    <p>In this release, we&#39;ve added the much-anticipated update feature! You may have noticed that we started making it back in version 0.6, but didn&#39;t finish it for some reason (including slow GitHub downloads, etc.). Now, we can check for XMCL updates and download and install them.More see <a href="https://github.com/ASStudioEFL/XMCLServer/">XMCLServer</a></p>
+  
+  <h3 id="bug-fix">Bug Fix</h3>
+    <p>中文版:<br>修复部分整合包无法修改启动时游戏窗口大小的问题<br>修复终止游戏后启动器不会停止等待的问题<br>修复 1.5.2 及以下版本不能下载资源文件的问题<br>修复某些情况下启动游戏时，启动器会崩溃的问题<br>修复进入游戏设置后无法重命名部分游戏版本的问题<br>修复不能在 Java 17 下载 Forge 和自动更新的问题<br>修复重命名版本时，输入不合法的新名字后的错误提示<br>修复重命名被依赖的版本后，会破坏其他依赖这个版本的版本的问题<br>修复在自定义游戏运行目录时，输入不合法的路径会导致崩溃的问题<br>修复在输入特定错误的 authlib-injector 服务器地址时会导致启动器崩溃的问题  </p>
+    <hr>
+    <p>English version:<br>Fix the problem that some packages can&#39;t change the size of the game window at startup.<br>Fix the issue where the launcher doesn&#39;t stop waiting after game termination<br>Fix the problem that resource files cannot be downloaded from version 1.5.2 and below.<br>Fix the issue where the launcher crashes when starting the game in some cases<br>Fix the problem of not being able to rename part of the game version after entering game settings.<br>Fix issue with Forge and automatic updates not downloading in Java 17<br>Fix error when renaming a version after entering an illegal new name<br>Fix issue where renaming a dependent version would break other versions that were dependent on that version<br>Fix the issue where entering an illegal path caused a crash when customizing the game run directory<br>Fix an issue that causes the launcher to crash when typing in a specific wrong authlib-injector server address  </p>
+  
+  <h3 id="feature">Feature</h3>
+    <p>中文版:<br>修改界面<br>更新俄语翻译<br>改善游戏下载速度<br>添加复制游戏实例功能<br>添加清理缓存文件夹按钮<br>修改默认下载源为 MCBBS<br>提升与 ServerSync 的兼容性<br>添加为正版账号上传皮肤的功能<br>支持调整并记住启动器窗口大小<br>在日志窗口添加导出游戏日志功能<br>现在会校验资源索引文件的完整性<br>现在启动器代理设置对启动后的游戏有效<br>在启动游戏、安装游戏等界面显示总下载速度<br>游戏崩溃后显示游戏崩溃报告而不是游戏日志<br>允许在启动游戏按钮上滑动鼠标滚轮切换游戏<br>在删除 Mod、世界、数据包时弹出删除确认提示<br>允许使用在启动器同目录下的 authlib-injector.jar 文件<br>在游戏崩溃后的第二次启动时自动检查资源和支持库文件是否完整<br>添加启动器的 JVM 参数 -Dhmcl.font.override=fontfamily 以允许 Linux 用户更换字体以解决白屏问题  </p>
+    <hr>
+    <p>English Version:<br>Modifying the interface<br>Russian translation updated<br>Improve game download speed<br>Add the ability to copy game instances<br>Add button to clear cache folder<br>Change the default download source to MCBBS<br>Improved compatibility with ServerSync<br>Added the ability to upload skins as a legitimate account<br>Support for adjusting and remembering the size of the launcher window<br>Add Export Game Log function to the log window<br>The integrity of the resource index file is now verified.<br>The launcher proxy settings now work for games after launch<br>Display total download speed in the interface of starting games, installing games, etc.<br>Showing game crash reports instead of game logs after a game crash<br>Allows switching between games by sliding the mouse wheel on the start game button<br>A pop-up deletion confirmation prompt is displayed when deleting Mods, Worlds, and Packages.<br>Allows the use of the authlib-injector.jar file in the same directory as the initiator.<br>Automatically check resource and support library files for completeness on the second boot after a game crash<br>Add JVM parameter -Dhmcl.font.override=fontfamily to the bootloader to allow Linux users to change fonts to resolve white screen issues  </p>
