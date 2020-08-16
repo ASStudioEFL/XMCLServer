@@ -1,1031 +1,1027 @@
-<h1 id="0-7-1-alpha">0.7.1.ALPHA</h1>
-
-  <h3>更新内容Git版</h3>
-  <p>
-    <i>M代表更改 D代表删除 A代表增加 ??代表未知</i>
-    <code>
-    M .gitignore
-    D HMCL/.travis.yml
-    D HMCL/build.gradle
-    D HMCL/settings.gradle
-    D HMCL/src/main/java/org/jackhuang/hmcl/Launcher.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/Main.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/Metadata.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/game/HMCLCacheRepository.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/game/HMCLGameLauncher.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/game/HMCLGameRepository.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/game/HMCLModpackExportTask.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/game/HMCLModpackInstallTask.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/game/HMCLModpackManager.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/game/HMCLModpackManifest.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/game/LauncherHelper.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/game/LoadingState.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/game/ModpackHelper.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/game/MultiMCInstallVersionSettingTask.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/game/TexturesLoader.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/setting/Accounts.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/setting/AuthlibInjectorServers.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/setting/Config.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/setting/ConfigHolder.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/setting/ConfigUpgrader.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/setting/DownloadProviders.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/setting/EnumBackgroundImage.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/setting/EnumCommonDirectory.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/setting/LauncherVisibility.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/setting/Profile.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/setting/Profiles.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/setting/ProxyManager.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/setting/Settings.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/setting/Theme.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/setting/VersionSetting.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/Controllers.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/CrashWindow.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/DialogController.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/FXUtils.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/InstallerItem.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/ListPage.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/ListPageBase.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/ListPageSkin.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/LogWindow.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/SVG.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/ToolbarListPageSkin.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/UpgradeDialog.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/WeakListenerHolder.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/WebStage.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/account/AccountAdvancedListItem.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/account/AccountList.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/account/AccountListItem.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/account/AccountListItemSkin.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/account/AccountLoginPane.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/account/AddAccountPane.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/account/AddAuthlibInjectorServerPane.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/account/AuthlibInjectorServerItem.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/account/AuthlibInjectorServersPage.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/animation/AnimationHandler.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/animation/AnimationProducer.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/animation/ContainerAnimations.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/animation/TransitionPane.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/AdvancedListBox.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/AdvancedListItem.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/AdvancedListItemSkin.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/ClassTitle.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/ComponentList.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/ComponentListCell.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/ComponentSublist.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/DialogAware.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/DialogCloseEvent.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/FileItem.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/FloatListCell.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/FloatScrollBarSkin.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/FontComboBox.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/IconedItem.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/IconedMenuItem.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/ImagePickerItem.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/InputDialogPane.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/MenuSeparator.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/MessageDialogPane.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/MultiColorItem.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/MultiFileItem.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/Navigator.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/NoneMultipleSelectionModel.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/NumberValidator.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/PageCloseEvent.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/PopupMenu.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/PromptDialogPane.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/RipplerContainer.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/SpinnerPane.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/StackContainerPane.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/TabControl.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/TabHeader.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/TaskExecutorDialogPane.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/TaskListPane.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/TwoLineListItem.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/Validator.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/decorator/Decorator.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/decorator/DecoratorController.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/decorator/DecoratorNavigatorPage.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/decorator/DecoratorPage.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/decorator/DecoratorSkin.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/decorator/DecoratorTabPage.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/decorator/DecoratorTransitionPage.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/decorator/DecoratorWizardDisplayer.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/download/AdditionalInstallersPage.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/download/InstallerWizardDownloadProvider.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/download/InstallersPage.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/download/LocalModpackPage.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/download/ModpackInstallWizardProvider.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/download/ModpackSelectionPage.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/download/RemoteModpackPage.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/download/UpdateInstallerWizardProvider.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/download/VanillaInstallWizardProvider.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/download/VersionsPage.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/export/ExportWizardProvider.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/export/ModpackFileSelectionPage.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/export/ModpackInfoPage.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/export/ModpackTypeSelectionPage.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/main/MainPage.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/main/RootPage.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/main/SettingsPage.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/main/SettingsView.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/profile/ProfileAdvancedListItem.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/profile/ProfileList.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/profile/ProfileListItem.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/profile/ProfileListItemSkin.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/profile/ProfilePage.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/versions/DatapackListPage.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/versions/DatapackListPageSkin.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/versions/GameAdvancedListItem.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/versions/GameItem.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/versions/GameItemSkin.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/versions/GameList.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/versions/GameListItem.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/versions/GameListItemSkin.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/versions/InstallerListPage.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/versions/ModListPage.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/versions/ModListPageSkin.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/versions/VersionPage.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/versions/VersionSettingsPage.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/versions/Versions.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/versions/WorldExportPage.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/versions/WorldExportPageSkin.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/versions/WorldListItem.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/versions/WorldListItemSkin.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/versions/WorldListPage.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/wizard/AbstractWizardDisplayer.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/wizard/Navigation.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/wizard/Refreshable.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/wizard/SinglePageWizardProvider.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/wizard/Summary.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/wizard/TaskExecutorDialogWizardDisplayer.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/wizard/WizardController.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/wizard/WizardDisplayer.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/wizard/WizardNavigationResult.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/wizard/WizardPage.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/wizard/WizardProvider.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/ui/wizard/WizardSinglePage.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/upgrade/ExecutableHeaderHelper.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/upgrade/HMCLDownloadTask.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/upgrade/IntegrityChecker.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/upgrade/RemoteVersion.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/upgrade/UpdateChannel.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/upgrade/UpdateChecker.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/upgrade/UpdateHandler.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/util/CrashReporter.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/util/ResourceNotFoundError.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/util/i18n/I18n.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/util/i18n/Locales.java
-    D HMCL/src/main/java/org/jackhuang/hmcl/util/i18n/UTF8Control.java
-    D HMCL/src/main/resources/assets/css/blue.css
-    D HMCL/src/main/resources/assets/css/custom.css
-    D HMCL/src/main/resources/assets/css/root.css
-    D HMCL/src/main/resources/assets/fxml/account-add.fxml
-    D HMCL/src/main/resources/assets/fxml/account-login.fxml
-    D HMCL/src/main/resources/assets/fxml/account.fxml
-    D HMCL/src/main/resources/assets/fxml/authlib-injector-server-add.fxml
-    D HMCL/src/main/resources/assets/fxml/download/additional-installers.fxml
-    D HMCL/src/main/resources/assets/fxml/download/modpack-source.fxml
-    D HMCL/src/main/resources/assets/fxml/download/modpack.fxml
-    D HMCL/src/main/resources/assets/fxml/download/versions-list-item.fxml
-    D HMCL/src/main/resources/assets/fxml/download/versions.fxml
-    D HMCL/src/main/resources/assets/fxml/input-dialog.fxml
-    D HMCL/src/main/resources/assets/fxml/message-dialog.fxml
-    D HMCL/src/main/resources/assets/fxml/modpack/selection.fxml
-    D HMCL/src/main/resources/assets/fxml/modpack/type.fxml
-    D HMCL/src/main/resources/assets/fxml/profile.fxml
-    D HMCL/src/main/resources/assets/fxml/task-dialog.fxml
-    D HMCL/src/main/resources/assets/fxml/version/version-settings.fxml
-    D HMCL/src/main/resources/assets/hmcl_signature_publickey.der
-    D HMCL/src/main/resources/assets/img/alex.png
-    D HMCL/src/main/resources/assets/img/background.jpg
-    D HMCL/src/main/resources/assets/img/bookshelf.png
-    D HMCL/src/main/resources/assets/img/chicken.png
-    D HMCL/src/main/resources/assets/img/command.png
-    D HMCL/src/main/resources/assets/img/craft_table.png
-    D HMCL/src/main/resources/assets/img/fabric.png
-    D HMCL/src/main/resources/assets/img/forge.png
-    D HMCL/src/main/resources/assets/img/furnace.png
-    D HMCL/src/main/resources/assets/img/grass.png
-    D HMCL/src/main/resources/assets/img/icon.png
-    D HMCL/src/main/resources/assets/img/steve.png
-    D HMCL/src/main/resources/assets/img/welcome.png
-    D HMCL/src/main/resources/assets/lang/I18N.properties
-    D HMCL/src/main/resources/assets/lang/I18N_es.properties
-    D HMCL/src/main/resources/assets/lang/I18N_ru.properties
-    D HMCL/src/main/resources/assets/lang/I18N_zh.properties
-    D HMCL/src/main/resources/assets/lang/I18N_zh_CN.properties
-    D HMCL/src/main/resources/assets/lekeystore.jks
-    D HMCL/src/main/resources/assets/svg/arrow-left.fxml
-    D HMCL/src/main/resources/assets/svg/arrow-right.fxml
-    D HMCL/src/main/resources/assets/svg/close-black.fxml
-    D HMCL/src/main/resources/assets/svg/close.fxml
-    D HMCL/src/main/resources/assets/svg/folder-open.fxml
-    D HMCL/src/main/resources/assets/svg/gear.fxml
-    D HMCL/src/main/resources/assets/svg/plus.fxml
-    D HMCL/src/main/resources/assets/svg/refresh.fxml
-    D HMCL/src/main/resources/assets/svg/wrench-white.fxml
-    D HMCL/welcome_page.png
-    D HMCLCore/build.gradle
-    D HMCLCore/gradle/wrapper/gradle-wrapper.jar
-    D HMCLCore/gradle/wrapper/gradle-wrapper.properties
-    D HMCLCore/gradlew
-    D HMCLCore/gradlew.bat
-    D HMCLCore/settings.gradle
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/Account.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/AccountFactory.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/AuthInfo.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/AuthenticationException.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/CharacterDeletedException.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/CharacterSelector.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/CredentialExpiredException.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/NoCharacterException.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/NoSelectedCharacterException.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/ServerDisconnectException.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/ServerResponseMalformedException.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/authlibinjector/AuthlibInjectorAccount.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/authlibinjector/AuthlibInjectorAccountFactory.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/authlibinjector/AuthlibInjectorArtifactInfo.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/authlibinjector/AuthlibInjectorArtifactProvider.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/authlibinjector/AuthlibInjectorDnD.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/authlibinjector/AuthlibInjectorDownloadException.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/authlibinjector/AuthlibInjectorDownloader.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/authlibinjector/AuthlibInjectorProvider.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/authlibinjector/AuthlibInjectorServer.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/authlibinjector/SimpleAuthlibInjectorArtifactProvider.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/offline/OfflineAccount.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/offline/OfflineAccountFactory.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/CompleteGameProfile.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/GameProfile.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/MojangYggdrasilProvider.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/PropertyMapSerializer.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/RemoteAuthenticationException.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/Texture.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/TextureModel.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/TextureType.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/User.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/YggdrasilAccount.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/YggdrasilAccountFactory.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/YggdrasilProvider.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/YggdrasilService.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/YggdrasilSession.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/AbstractDependencyManager.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/AdaptedDownloadProvider.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/ArtifactMalformedException.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/BMCLAPIDownloadProvider.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/DefaultCacheRepository.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/DefaultDependencyManager.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/DefaultGameBuilder.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/DependencyManager.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/DownloadProvider.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/GameBuilder.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/LibraryAnalyzer.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/MaintainTask.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/MojangDownloadProvider.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/RemoteVersion.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/VersionList.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/VersionMismatchException.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/fabric/FabricInstallTask.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/fabric/FabricRemoteVersion.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/fabric/FabricVersionList.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/forge/ForgeBMCLVersionList.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/forge/ForgeInstall.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/forge/ForgeInstallProfile.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/forge/ForgeInstallTask.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/forge/ForgeNewInstallProfile.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/forge/ForgeNewInstallTask.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/forge/ForgeOldInstallTask.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/forge/ForgeRemoteVersion.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/forge/ForgeVersion.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/forge/ForgeVersionList.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/forge/ForgeVersionRoot.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/game/GameAssetDownloadTask.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/game/GameAssetIndexDownloadTask.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/game/GameDownloadTask.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/game/GameInstallTask.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/game/GameLibrariesTask.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/game/GameRemoteLatestVersions.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/game/GameRemoteVersion.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/game/GameRemoteVersionInfo.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/game/GameRemoteVersions.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/game/GameVerificationFixTask.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/game/GameVersionList.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/game/LibraryDownloadException.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/game/LibraryDownloadTask.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/game/VersionJsonDownloadTask.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/game/VersionJsonSaveTask.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/liteloader/LiteLoaderBMCLVersionList.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/liteloader/LiteLoaderBranch.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/liteloader/LiteLoaderGameVersions.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/liteloader/LiteLoaderInstallTask.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/liteloader/LiteLoaderRemoteVersion.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/liteloader/LiteLoaderRepository.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/liteloader/LiteLoaderVersion.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/liteloader/LiteLoaderVersionList.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/liteloader/LiteLoaderVersionsMeta.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/liteloader/LiteLoaderVersionsRoot.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/optifine/OptiFineBMCLVersionList.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/optifine/OptiFineInstallTask.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/optifine/OptiFineRemoteVersion.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/download/optifine/OptiFineVersion.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/event/Event.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/event/EventBus.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/event/EventManager.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/event/EventPriority.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/event/FailedEvent.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/event/GameJsonParseFailedEvent.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/event/JVMLaunchFailedEvent.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/event/LoadedOneVersionEvent.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/event/ProcessExitedAbnormallyEvent.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/event/ProcessStoppedEvent.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/event/RefreshedVersionsEvent.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/event/RefreshingVersionsEvent.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/event/RemoveVersionEvent.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/event/RenameVersionEvent.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/game/Argument.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/game/Arguments.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/game/Artifact.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/game/AssetIndex.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/game/AssetIndexInfo.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/game/AssetObject.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/game/ClassicLibrary.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/game/ClassicVersion.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/game/CompatibilityRule.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/game/DefaultGameRepository.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/game/DownloadInfo.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/game/DownloadType.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/game/ExtractRules.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/game/GameDirectoryType.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/game/GameException.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/game/GameRepository.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/game/GameVersion.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/game/IdDownloadInfo.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/game/LaunchOptions.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/game/LibrariesDownloadInfo.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/game/Library.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/game/LibraryDownloadInfo.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/game/LoggingInfo.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/game/OSRestriction.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/game/ReleaseType.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/game/RuledArgument.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/game/SimpleVersionProvider.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/game/StringArgument.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/game/Version.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/game/VersionLibraryBuilder.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/game/VersionNotFoundException.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/game/VersionProvider.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/game/World.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/launch/DefaultLauncher.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/launch/ExitWaiter.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/launch/Launcher.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/launch/NotDecompressingNativesException.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/launch/PermissionException.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/launch/ProcessCreationException.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/launch/ProcessListener.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/launch/StreamPump.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/Datapack.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/FabricModMetadata.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/ForgeModMetadata.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/LiteModMetadata.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/MinecraftInstanceTask.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/MismatchedModpackTypeException.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/ModAdviser.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/ModInfo.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/ModManager.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/Modpack.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/ModpackConfiguration.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/ModpackInstallTask.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/ModpackUpdateTask.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/PackMcMeta.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/UnsupportedModpackException.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/curse/CurseCompletionException.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/curse/CurseCompletionTask.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/curse/CurseInstallTask.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/curse/CurseManifest.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/curse/CurseManifestFile.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/curse/CurseManifestMinecraft.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/curse/CurseManifestModLoader.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/curse/CurseMetaMod.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/multimc/MultiMCInstanceConfiguration.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/multimc/MultiMCInstancePatch.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/multimc/MultiMCManifest.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/multimc/MultiMCModpackExportTask.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/multimc/MultiMCModpackInstallTask.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/server/ServerModpackCompletionTask.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/server/ServerModpackExportTask.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/server/ServerModpackLocalInstallTask.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/server/ServerModpackManifest.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/server/ServerModpackRemoteInstallTask.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/task/AsyncTaskExecutor.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/task/CancellableTaskExecutor.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/task/DownloadException.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/task/FetchTask.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/task/FileDownloadTask.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/task/GetTask.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/task/Schedulers.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/task/Task.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/task/TaskEvent.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/task/TaskExecutor.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/task/TaskListener.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/CacheRepository.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/Constants.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/DigestUtils.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/FutureCallback.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/Hex.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/Immutable.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/InvocationDispatcher.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/Lang.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/Log4jLevel.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/Logging.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/Pair.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/ReflectionHelper.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/SimpleMultimap.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/StringUtils.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/ToStringBuilder.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/function/ExceptionalBiConsumer.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/function/ExceptionalBiFunction.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/function/ExceptionalConsumer.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/function/ExceptionalFunction.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/function/ExceptionalPredicate.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/function/ExceptionalRunnable.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/function/ExceptionalSupplier.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/gson/DateTypeAdapter.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/gson/EnumOrdinalDeserializer.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/gson/FileTypeAdapter.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/gson/JsonMap.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/gson/JsonUtils.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/gson/LowerCaseEnumTypeAdapterFactory.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/gson/TolerableValidationException.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/gson/UUIDTypeAdapter.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/gson/Validation.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/gson/ValidationTypeAdapterFactory.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/io/ChecksumMismatchException.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/io/CompressingUtils.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/io/FileUtils.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/io/HttpMultipartRequest.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/io/IOUtils.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/io/JarUtils.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/io/NetworkUtils.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/io/ResponseCodeException.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/io/Unzipper.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/io/Zipper.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/javafx/AutomatedToggleGroup.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/javafx/BindingMapping.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/javafx/ExtendedProperties.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/javafx/MappedObservableList.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/javafx/MappedProperty.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/javafx/ObservableCache.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/javafx/ObservableHelper.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/javafx/ObservableOptionalCache.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/javafx/PropertyUtils.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/javafx/ReadWriteComposedProperty.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/javafx/ReferenceHolder.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/javafx/SafeStringConverter.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/platform/CommandBuilder.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/platform/JavaVersion.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/platform/ManagedProcess.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/platform/OperatingSystem.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/platform/Platform.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/platform/SystemUtils.java
-    D HMCLCore/src/main/java/org/jackhuang/hmcl/util/versioning/VersionNumber.java
-    D HMCLCore/src/main/resources/assets/game/HMCLTransformerDiscoveryService-1.0.jar
-    D HMCLCore/src/test/java/org/jackhuang/hmcl/util/TaskTest.java
-    D HMCLCore/src/test/java/org/jackhuang/hmcl/util/VersionNumberTest.java
-    D HMCLTransformerDiscoveryService/build.gradle
-    D HMCLTransformerDiscoveryService/lib/modlauncher-4.1.0.jar
-    D HMCLTransformerDiscoveryService/src/main/java/org/jackhuang/hmcl/HMCLTransformerDiscoveryService.java
-    D HMCLTransformerDiscoveryService/src/main/resources/META-INF/services/cpw.mods.modlauncher.serviceapi.ITransformerDiscoveryService
-    D HMCLauncher/.gitignore
-    D HMCLauncher/HMCL/HMCL.APS
-    D HMCLauncher/HMCL/HMCL.ico
-    D HMCLauncher/HMCL/HMCL.rc
-    D HMCLauncher/HMCL/HMCL.vcxproj
-    D HMCLauncher/HMCL/HMCL.vcxproj.filters
-    D HMCLauncher/HMCL/HMCL.vcxproj.user
-    D HMCLauncher/HMCL/Version.cpp
-    D HMCLauncher/HMCL/Version.h
-    D HMCLauncher/HMCL/java.cpp
-    D HMCLauncher/HMCL/java.h
-    D HMCLauncher/HMCL/lang.h
-    D HMCLauncher/HMCL/main.cpp
-    D HMCLauncher/HMCL/main.h
-    D HMCLauncher/HMCL/os.cpp
-    D HMCLauncher/HMCL/os.h
-    D HMCLauncher/HMCL/resource.h
-    D HMCLauncher/HMCL/stdafx.cpp
-    D HMCLauncher/HMCL/stdafx.h
-    D HMCLauncher/HMCL/targetver.h
-    D HMCLauncher/HMCLauncher.sln
-   M  README.md
-   A  XMCL/.travis.yml
-   A  XMCL/build.gradle
-   A  XMCL/settings.gradle
-   A  XMCL/src/main/java/org/efl/xmcl/Launcher.java
-   A  XMCL/src/main/java/org/efl/xmcl/Main.java
-   A  XMCL/src/main/java/org/efl/xmcl/Metadata.java
-   A  XMCL/src/main/java/org/efl/xmcl/game/LauncherHelper.java
-   A  XMCL/src/main/java/org/efl/xmcl/game/LoadingState.java
-   A  XMCL/src/main/java/org/efl/xmcl/game/ModpackHelper.java
-   A  XMCL/src/main/java/org/efl/xmcl/game/MultiMCInstallVersionSettingTask.java
-   A  XMCL/src/main/java/org/efl/xmcl/game/TexturesLoader.java
-   A  XMCL/src/main/java/org/efl/xmcl/game/XMCLCacheRepository.java
-   A  XMCL/src/main/java/org/efl/xmcl/game/XMCLGameLauncher.java
-   A  XMCL/src/main/java/org/efl/xmcl/game/XMCLGameRepository.java
-   A  XMCL/src/main/java/org/efl/xmcl/game/XMCLModpackExportTask.java
-   A  XMCL/src/main/java/org/efl/xmcl/game/XMCLModpackInstallTask.java
-   A  XMCL/src/main/java/org/efl/xmcl/game/XMCLModpackManager.java
-   A  XMCL/src/main/java/org/efl/xmcl/game/XMCLModpackManifest.java
-   A  XMCL/src/main/java/org/efl/xmcl/setting/Accounts.java
-   A  XMCL/src/main/java/org/efl/xmcl/setting/AuthlibInjectorServers.java
-   A  XMCL/src/main/java/org/efl/xmcl/setting/Config.java
-   A  XMCL/src/main/java/org/efl/xmcl/setting/ConfigHolder.java
-   A  XMCL/src/main/java/org/efl/xmcl/setting/ConfigUpgrader.java
-   A  XMCL/src/main/java/org/efl/xmcl/setting/DownloadProviders.java
-   A  XMCL/src/main/java/org/efl/xmcl/setting/EnumBackgroundImage.java
-   A  XMCL/src/main/java/org/efl/xmcl/setting/EnumCommonDirectory.java
-   A  XMCL/src/main/java/org/efl/xmcl/setting/LauncherVisibility.java
-   A  XMCL/src/main/java/org/efl/xmcl/setting/Profile.java
-   A  XMCL/src/main/java/org/efl/xmcl/setting/Profiles.java
-   A  XMCL/src/main/java/org/efl/xmcl/setting/ProxyManager.java
-   A  XMCL/src/main/java/org/efl/xmcl/setting/Settings.java
-   A  XMCL/src/main/java/org/efl/xmcl/setting/Theme.java
-   A  XMCL/src/main/java/org/efl/xmcl/setting/VersionSetting.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/Controllers.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/CrashWindow.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/DialogController.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/FXUtils.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/InstallerItem.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/ListPage.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/ListPageBase.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/ListPageSkin.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/LogWindow.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/SVG.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/ToolbarListPageSkin.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/UpgradeDialog.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/WeakListenerHolder.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/WebStage.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/account/AccountAdvancedListItem.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/account/AccountList.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/account/AccountListItem.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/account/AccountListItemSkin.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/account/AccountLoginPane.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/account/AddAccountPane.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/account/AddAuthlibInjectorServerPane.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/account/AuthlibInjectorServerItem.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/account/AuthlibInjectorServersPage.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/animation/AnimationHandler.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/animation/AnimationProducer.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/animation/ContainerAnimations.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/animation/TransitionPane.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/construct/AdvancedListBox.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/construct/AdvancedListItem.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/construct/AdvancedListItemSkin.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/construct/ClassTitle.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/construct/ComponentList.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/construct/ComponentListCell.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/construct/ComponentSublist.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/construct/DialogAware.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/construct/DialogCloseEvent.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/construct/FileItem.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/construct/FloatListCell.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/construct/FloatScrollBarSkin.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/construct/FontComboBox.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/construct/IconedItem.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/construct/IconedMenuItem.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/construct/ImagePickerItem.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/construct/InputDialogPane.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/construct/MenuSeparator.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/construct/MessageDialogPane.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/construct/MultiColorItem.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/construct/MultiFileItem.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/construct/Navigator.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/construct/NoneMultipleSelectionModel.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/construct/NumberValidator.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/construct/PageCloseEvent.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/construct/PopupMenu.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/construct/PromptDialogPane.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/construct/RipplerContainer.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/construct/SpinnerPane.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/construct/StackContainerPane.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/construct/TabControl.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/construct/TabHeader.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/construct/TaskExecutorDialogPane.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/construct/TaskListPane.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/construct/TwoLineListItem.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/construct/Validator.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/decorator/Decorator.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/decorator/DecoratorController.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/decorator/DecoratorNavigatorPage.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/decorator/DecoratorPage.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/decorator/DecoratorSkin.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/decorator/DecoratorTabPage.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/decorator/DecoratorTransitionPage.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/decorator/DecoratorWizardDisplayer.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/download/AdditionalInstallersPage.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/download/InstallerWizardDownloadProvider.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/download/InstallersPage.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/download/LocalModpackPage.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/download/ModpackInstallWizardProvider.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/download/ModpackSelectionPage.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/download/RemoteModpackPage.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/download/UpdateInstallerWizardProvider.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/download/VanillaInstallWizardProvider.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/download/VersionsPage.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/export/ExportWizardProvider.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/export/ModpackFileSelectionPage.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/export/ModpackInfoPage.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/export/ModpackTypeSelectionPage.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/main/MainPage.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/main/RootPage.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/main/SettingsPage.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/main/SettingsView.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/profile/ProfileAdvancedListItem.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/profile/ProfileList.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/profile/ProfileListItem.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/profile/ProfileListItemSkin.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/profile/ProfilePage.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/versions/DatapackListPage.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/versions/DatapackListPageSkin.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/versions/GameAdvancedListItem.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/versions/GameItem.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/versions/GameItemSkin.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/versions/GameList.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/versions/GameListItem.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/versions/GameListItemSkin.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/versions/InstallerListPage.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/versions/ModListPage.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/versions/ModListPageSkin.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/versions/VersionPage.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/versions/VersionSettingsPage.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/versions/Versions.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/versions/WorldExportPage.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/versions/WorldExportPageSkin.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/versions/WorldListItem.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/versions/WorldListItemSkin.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/versions/WorldListPage.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/wizard/AbstractWizardDisplayer.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/wizard/Navigation.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/wizard/Refreshable.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/wizard/SinglePageWizardProvider.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/wizard/Summary.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/wizard/TaskExecutorDialogWizardDisplayer.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/wizard/WizardController.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/wizard/WizardDisplayer.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/wizard/WizardNavigationResult.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/wizard/WizardPage.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/wizard/WizardProvider.java
-   A  XMCL/src/main/java/org/efl/xmcl/ui/wizard/WizardSinglePage.java
-   A  XMCL/src/main/java/org/efl/xmcl/upgrade/ExecutableHeaderHelper.java
-   A  XMCL/src/main/java/org/efl/xmcl/upgrade/IntegrityChecker.java
-   A  XMCL/src/main/java/org/efl/xmcl/upgrade/RemoteVersion.java
-   A  XMCL/src/main/java/org/efl/xmcl/upgrade/UpdateChannel.java
-   A  XMCL/src/main/java/org/efl/xmcl/upgrade/UpdateChecker.java
-   A  XMCL/src/main/java/org/efl/xmcl/upgrade/UpdateHandler.java
-   A  XMCL/src/main/java/org/efl/xmcl/upgrade/XMCLDownloadTask.java
-   A  XMCL/src/main/java/org/efl/xmcl/util/CrashReporter.java
-   A  XMCL/src/main/java/org/efl/xmcl/util/ResourceNotFoundError.java
-   A  XMCL/src/main/java/org/efl/xmcl/util/i18n/I18n.java
-   A  XMCL/src/main/java/org/efl/xmcl/util/i18n/Locales.java
-   A  XMCL/src/main/java/org/efl/xmcl/util/i18n/UTF8Control.java
-   A  XMCL/src/main/resources/assets/XMCL_signature_publickey.der
-   A  XMCL/src/main/resources/assets/css/blue.css
-   A  XMCL/src/main/resources/assets/css/custom.css
-   A  XMCL/src/main/resources/assets/css/root.css
-   A  XMCL/src/main/resources/assets/fxml/account-add.fxml
-   A  XMCL/src/main/resources/assets/fxml/account-login.fxml
-   A  XMCL/src/main/resources/assets/fxml/account.fxml
-   A  XMCL/src/main/resources/assets/fxml/authlib-injector-server-add.fxml
-   A  XMCL/src/main/resources/assets/fxml/download/additional-installers.fxml
-   A  XMCL/src/main/resources/assets/fxml/download/modpack-source.fxml
-   A  XMCL/src/main/resources/assets/fxml/download/modpack.fxml
-   A  XMCL/src/main/resources/assets/fxml/download/versions-list-item.fxml
-   A  XMCL/src/main/resources/assets/fxml/download/versions.fxml
-   A  XMCL/src/main/resources/assets/fxml/input-dialog.fxml
-   A  XMCL/src/main/resources/assets/fxml/message-dialog.fxml
-   A  XMCL/src/main/resources/assets/fxml/modpack/selection.fxml
-   A  XMCL/src/main/resources/assets/fxml/modpack/type.fxml
-   A  XMCL/src/main/resources/assets/fxml/profile.fxml
-   A  XMCL/src/main/resources/assets/fxml/task-dialog.fxml
-   A  XMCL/src/main/resources/assets/fxml/version/version-settings.fxml
-   A  XMCL/src/main/resources/assets/img/alex.png
-   A  XMCL/src/main/resources/assets/img/background.jpg
-   A  XMCL/src/main/resources/assets/img/bookshelf.png
-   A  XMCL/src/main/resources/assets/img/chicken.png
-   A  XMCL/src/main/resources/assets/img/command.png
-   A  XMCL/src/main/resources/assets/img/craft_table.png
-   A  XMCL/src/main/resources/assets/img/fabric.png
-   A  XMCL/src/main/resources/assets/img/forge.png
-   A  XMCL/src/main/resources/assets/img/furnace.png
-   A  XMCL/src/main/resources/assets/img/grass.png
-   A  XMCL/src/main/resources/assets/img/icon.png
-   A  XMCL/src/main/resources/assets/img/steve.png
-   A  XMCL/src/main/resources/assets/img/welcome.png
-   A  XMCL/src/main/resources/assets/lang/I18N.properties
-   A  XMCL/src/main/resources/assets/lang/I18N_es.properties
-   A  XMCL/src/main/resources/assets/lang/I18N_ru.properties
-   A  XMCL/src/main/resources/assets/lang/I18N_zh.properties
-   A  XMCL/src/main/resources/assets/lang/I18N_zh_CN.properties
-   A  XMCL/src/main/resources/assets/lekeystore.jks
-   A  XMCL/src/main/resources/assets/svg/arrow-left.fxml
-   A  XMCL/src/main/resources/assets/svg/arrow-right.fxml
-   A  XMCL/src/main/resources/assets/svg/close-black.fxml
-   A  XMCL/src/main/resources/assets/svg/close.fxml
-   A  XMCL/src/main/resources/assets/svg/folder-open.fxml
-   A  XMCL/src/main/resources/assets/svg/gear.fxml
-   A  XMCL/src/main/resources/assets/svg/plus.fxml
-   A  XMCL/src/main/resources/assets/svg/refresh.fxml
-   A  XMCL/src/main/resources/assets/svg/wrench-white.fxml
-   A  XMCL/welcome_page.png
-   A  XMCLCore/build.gradle
-   A  XMCLCore/gradle/wrapper/gradle-wrapper.jar
-   A  XMCLCore/gradle/wrapper/gradle-wrapper.properties
-   A  XMCLCore/gradlew
-   A  XMCLCore/gradlew.bat
-   A  XMCLCore/settings.gradle
-   A  XMCLCore/src/main/java/org/efl/xmcl/auth/Account.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/auth/AccountFactory.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/auth/AuthInfo.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/auth/AuthenticationException.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/auth/CharacterDeletedException.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/auth/CharacterSelector.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/auth/CredentialExpiredException.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/auth/NoCharacterException.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/auth/NoSelectedCharacterException.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/auth/ServerDisconnectException.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/auth/ServerResponseMalformedException.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/auth/authlibinjector/AuthlibInjectorAccount.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/auth/authlibinjector/AuthlibInjectorAccountFactory.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/auth/authlibinjector/AuthlibInjectorArtifactInfo.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/auth/authlibinjector/AuthlibInjectorArtifactProvider.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/auth/authlibinjector/AuthlibInjectorDnD.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/auth/authlibinjector/AuthlibInjectorDownloadException.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/auth/authlibinjector/AuthlibInjectorDownloader.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/auth/authlibinjector/AuthlibInjectorProvider.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/auth/authlibinjector/AuthlibInjectorServer.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/auth/authlibinjector/SimpleAuthlibInjectorArtifactProvider.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/auth/offline/OfflineAccount.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/auth/offline/OfflineAccountFactory.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/auth/yggdrasil/CompleteGameProfile.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/auth/yggdrasil/GameProfile.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/auth/yggdrasil/MojangYggdrasilProvider.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/auth/yggdrasil/PropertyMapSerializer.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/auth/yggdrasil/RemoteAuthenticationException.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/auth/yggdrasil/Texture.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/auth/yggdrasil/TextureModel.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/auth/yggdrasil/TextureType.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/auth/yggdrasil/User.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/auth/yggdrasil/YggdrasilAccount.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/auth/yggdrasil/YggdrasilAccountFactory.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/auth/yggdrasil/YggdrasilProvider.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/auth/yggdrasil/YggdrasilService.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/auth/yggdrasil/YggdrasilSession.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/AbstractDependencyManager.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/AdaptedDownloadProvider.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/ArtifactMalformedException.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/BMCLAPIDownloadProvider.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/DefaultCacheRepository.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/DefaultDependencyManager.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/DefaultGameBuilder.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/DependencyManager.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/DownloadProvider.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/GameBuilder.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/LibraryAnalyzer.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/MaintainTask.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/MojangDownloadProvider.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/RemoteVersion.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/VersionList.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/VersionMismatchException.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/fabric/FabricInstallTask.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/fabric/FabricRemoteVersion.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/fabric/FabricVersionList.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/forge/ForgeBMCLVersionList.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/forge/ForgeInstall.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/forge/ForgeInstallProfile.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/forge/ForgeInstallTask.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/forge/ForgeNewInstallProfile.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/forge/ForgeNewInstallTask.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/forge/ForgeOldInstallTask.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/forge/ForgeRemoteVersion.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/forge/ForgeVersion.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/forge/ForgeVersionList.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/forge/ForgeVersionRoot.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/game/GameAssetDownloadTask.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/game/GameAssetIndexDownloadTask.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/game/GameDownloadTask.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/game/GameInstallTask.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/game/GameLibrariesTask.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/game/GameRemoteLatestVersions.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/game/GameRemoteVersion.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/game/GameRemoteVersionInfo.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/game/GameRemoteVersions.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/game/GameVerificationFixTask.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/game/GameVersionList.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/game/LibraryDownloadException.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/game/LibraryDownloadTask.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/game/VersionJsonDownloadTask.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/game/VersionJsonSaveTask.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/liteloader/LiteLoaderBMCLVersionList.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/liteloader/LiteLoaderBranch.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/liteloader/LiteLoaderGameVersions.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/liteloader/LiteLoaderInstallTask.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/liteloader/LiteLoaderRemoteVersion.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/liteloader/LiteLoaderRepository.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/liteloader/LiteLoaderVersion.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/liteloader/LiteLoaderVersionList.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/liteloader/LiteLoaderVersionsMeta.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/liteloader/LiteLoaderVersionsRoot.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/optifine/OptiFineBMCLVersionList.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/optifine/OptiFineInstallTask.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/optifine/OptiFineRemoteVersion.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/download/optifine/OptiFineVersion.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/event/Event.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/event/EventBus.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/event/EventManager.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/event/EventPriority.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/event/FailedEvent.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/event/GameJsonParseFailedEvent.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/event/JVMLaunchFailedEvent.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/event/LoadedOneVersionEvent.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/event/ProcessExitedAbnormallyEvent.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/event/ProcessStoppedEvent.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/event/RefreshedVersionsEvent.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/event/RefreshingVersionsEvent.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/event/RemoveVersionEvent.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/event/RenameVersionEvent.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/game/Argument.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/game/Arguments.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/game/Artifact.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/game/AssetIndex.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/game/AssetIndexInfo.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/game/AssetObject.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/game/ClassicLibrary.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/game/ClassicVersion.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/game/CompatibilityRule.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/game/DefaultGameRepository.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/game/DownloadInfo.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/game/DownloadType.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/game/ExtractRules.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/game/GameDirectoryType.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/game/GameException.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/game/GameRepository.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/game/GameVersion.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/game/IdDownloadInfo.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/game/LaunchOptions.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/game/LibrariesDownloadInfo.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/game/Library.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/game/LibraryDownloadInfo.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/game/LoggingInfo.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/game/OSRestriction.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/game/ReleaseType.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/game/RuledArgument.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/game/SimpleVersionProvider.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/game/StringArgument.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/game/Version.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/game/VersionLibraryBuilder.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/game/VersionNotFoundException.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/game/VersionProvider.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/game/World.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/launch/DefaultLauncher.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/launch/ExitWaiter.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/launch/Launcher.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/launch/NotDecompressingNativesException.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/launch/PermissionException.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/launch/ProcessCreationException.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/launch/ProcessListener.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/launch/StreamPump.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/mod/Datapack.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/mod/FabricModMetadata.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/mod/ForgeModMetadata.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/mod/LiteModMetadata.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/mod/MinecraftInstanceTask.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/mod/MismatchedModpackTypeException.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/mod/ModAdviser.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/mod/ModInfo.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/mod/ModManager.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/mod/Modpack.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/mod/ModpackConfiguration.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/mod/ModpackInstallTask.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/mod/ModpackUpdateTask.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/mod/PackMcMeta.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/mod/UnsupportedModpackException.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/mod/curse/CurseCompletionException.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/mod/curse/CurseCompletionTask.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/mod/curse/CurseInstallTask.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/mod/curse/CurseManifest.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/mod/curse/CurseManifestFile.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/mod/curse/CurseManifestMinecraft.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/mod/curse/CurseManifestModLoader.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/mod/curse/CurseMetaMod.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/mod/multimc/MultiMCInstanceConfiguration.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/mod/multimc/MultiMCInstancePatch.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/mod/multimc/MultiMCManifest.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/mod/multimc/MultiMCModpackExportTask.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/mod/multimc/MultiMCModpackInstallTask.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/mod/server/ServerModpackCompletionTask.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/mod/server/ServerModpackExportTask.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/mod/server/ServerModpackLocalInstallTask.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/mod/server/ServerModpackManifest.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/mod/server/ServerModpackRemoteInstallTask.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/task/AsyncTaskExecutor.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/task/DownloadException.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/task/FetchTask.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/task/FileDownloadTask.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/task/GetTask.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/task/Schedulers.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/task/Task.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/task/TaskEvent.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/task/TaskExecutor.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/task/TaskListener.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/CacheRepository.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/Constants.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/DigestUtils.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/FutureCallback.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/Hex.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/Immutable.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/InvocationDispatcher.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/Lang.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/Log4jLevel.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/Logging.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/Pair.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/ReflectionHelper.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/SimpleMultimap.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/StringUtils.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/ToStringBuilder.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/function/ExceptionalBiConsumer.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/function/ExceptionalBiFunction.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/function/ExceptionalConsumer.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/function/ExceptionalFunction.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/function/ExceptionalPredicate.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/function/ExceptionalRunnable.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/function/ExceptionalSupplier.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/gson/DateTypeAdapter.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/gson/EnumOrdinalDeserializer.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/gson/FileTypeAdapter.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/gson/JsonMap.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/gson/JsonUtils.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/gson/LowerCaseEnumTypeAdapterFactory.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/gson/TolerableValidationException.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/gson/UUIDTypeAdapter.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/gson/Validation.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/gson/ValidationTypeAdapterFactory.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/io/ChecksumMismatchException.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/io/CompressingUtils.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/io/FileUtils.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/io/HttpMultipartRequest.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/io/IOUtils.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/io/JarUtils.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/io/NetworkUtils.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/io/ResponseCodeException.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/io/Unzipper.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/io/Zipper.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/javafx/AutomatedToggleGroup.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/javafx/BindingMapping.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/javafx/ExtendedProperties.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/javafx/MappedObservableList.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/javafx/MappedProperty.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/javafx/ObservableCache.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/javafx/ObservableHelper.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/javafx/ObservableOptionalCache.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/javafx/PropertyUtils.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/javafx/ReadWriteComposedProperty.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/javafx/ReferenceHolder.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/javafx/SafeStringConverter.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/platform/CommandBuilder.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/platform/JavaVersion.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/platform/ManagedProcess.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/platform/OperatingSystem.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/platform/Platform.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/platform/SystemUtils.java
-   A  XMCLCore/src/main/java/org/efl/xmcl/util/versioning/VersionNumber.java
-   A  XMCLCore/src/main/resources/assets/game/XMCLTransformerDiscoveryService-1.0.jar
-   A  XMCLCore/src/test/java/org/efl/xmcl/util/TaskTest.java
-   A  XMCLCore/src/test/java/org/efl/xmcl/util/VersionNumberTest.java
-   A  XMCLTransformerDiscoveryService/build.gradle
-   A  XMCLTransformerDiscoveryService/lib/modlauncher-4.1.0.jar
-   A  XMCLTransformerDiscoveryService/src/main/java/org/efl/xmcl/XMCLTransformerDiscoveryService.java
-   A  XMCLTransformerDiscoveryService/src/main/resources/META-INF/services/cpw.mods.modlauncher.serviceapi.ITransformerDiscoveryService
-   A  XMCLauncher/.gitignore
-   A  XMCLauncher/XMCL/Version.cpp
-   A  XMCLauncher/XMCL/Version.h
-   A  XMCLauncher/XMCL/XMCL.APS
-   A  XMCLauncher/XMCL/XMCL.ico
-   A  XMCLauncher/XMCL/XMCL.rc
-   A  XMCLauncher/XMCL/XMCL.vcxproj
-   A  XMCLauncher/XMCL/XMCL.vcxproj.filters
-   A  XMCLauncher/XMCL/XMCL.vcxproj.user
-   A  XMCLauncher/XMCL/java.cpp
-   A  XMCLauncher/XMCL/java.h
-   A  XMCLauncher/XMCL/lang.h
-   A  XMCLauncher/XMCL/main.cpp
-   A  XMCLauncher/XMCL/main.h
-   A  XMCLauncher/XMCL/os.cpp
-   A  XMCLauncher/XMCL/os.h
-   A  XMCLauncher/XMCL/resource.h
-   A  XMCLauncher/XMCL/stdafx.cpp
-   A  XMCLauncher/XMCL/stdafx.h
-   A  XMCLauncher/XMCL/targetver.h
-   A  XMCLauncher/XMCLauncher.sln
-   M  build.gradle
-   M  license-header.txt
-   M  settings.gradle
-   ?? .github/
-   </code>
-  </p>
+<h1 id="xmcl-0-8">XMCL 0.8</h1>
+<h3 id="-">以下是该版本的文件更新内容</h3>
+<pre><code> M .gitignore
+ D HMCL/.travis.yml
+ D HMCL/build.gradle
+ D HMCL/settings.gradle
+ D HMCL/src/main/java/org/jackhuang/hmcl/Launcher.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/Main.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/Metadata.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/game/HMCLCacheRepository.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/game/HMCLGameLauncher.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/game/HMCLGameRepository.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/game/HMCLModpackExportTask.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/game/HMCLModpackInstallTask.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/game/HMCLModpackManager.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/game/HMCLModpackManifest.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/game/LauncherHelper.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/game/LoadingState.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/game/ModpackHelper.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/game/MultiMCInstallVersionSettingTask.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/game/TexturesLoader.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/setting/Accounts.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/setting/AuthlibInjectorServers.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/setting/Config.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/setting/ConfigHolder.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/setting/ConfigUpgrader.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/setting/DownloadProviders.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/setting/EnumBackgroundImage.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/setting/EnumCommonDirectory.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/setting/LauncherVisibility.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/setting/Profile.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/setting/Profiles.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/setting/ProxyManager.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/setting/Settings.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/setting/Theme.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/setting/VersionSetting.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/Controllers.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/CrashWindow.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/DialogController.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/FXUtils.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/InstallerItem.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/ListPage.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/ListPageBase.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/ListPageSkin.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/LogWindow.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/SVG.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/ToolbarListPageSkin.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/UpgradeDialog.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/WeakListenerHolder.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/WebStage.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/account/AccountAdvancedListItem.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/account/AccountList.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/account/AccountListItem.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/account/AccountListItemSkin.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/account/AccountLoginPane.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/account/AddAccountPane.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/account/AddAuthlibInjectorServerPane.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/account/AuthlibInjectorServerItem.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/account/AuthlibInjectorServersPage.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/animation/AnimationHandler.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/animation/AnimationProducer.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/animation/ContainerAnimations.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/animation/TransitionPane.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/AdvancedListBox.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/AdvancedListItem.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/AdvancedListItemSkin.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/ClassTitle.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/ComponentList.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/ComponentListCell.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/ComponentSublist.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/DialogAware.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/DialogCloseEvent.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/FileItem.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/FloatListCell.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/FloatScrollBarSkin.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/FontComboBox.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/IconedItem.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/IconedMenuItem.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/ImagePickerItem.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/InputDialogPane.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/MenuSeparator.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/MessageDialogPane.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/MultiColorItem.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/MultiFileItem.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/Navigator.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/NoneMultipleSelectionModel.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/NumberValidator.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/PageCloseEvent.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/PopupMenu.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/PromptDialogPane.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/RipplerContainer.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/SpinnerPane.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/StackContainerPane.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/TabControl.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/TabHeader.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/TaskExecutorDialogPane.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/TaskListPane.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/TwoLineListItem.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/construct/Validator.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/decorator/Decorator.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/decorator/DecoratorController.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/decorator/DecoratorNavigatorPage.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/decorator/DecoratorPage.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/decorator/DecoratorSkin.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/decorator/DecoratorTabPage.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/decorator/DecoratorTransitionPage.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/decorator/DecoratorWizardDisplayer.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/download/AdditionalInstallersPage.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/download/InstallerWizardDownloadProvider.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/download/InstallersPage.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/download/LocalModpackPage.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/download/ModpackInstallWizardProvider.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/download/ModpackSelectionPage.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/download/RemoteModpackPage.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/download/UpdateInstallerWizardProvider.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/download/VanillaInstallWizardProvider.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/download/VersionsPage.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/export/ExportWizardProvider.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/export/ModpackFileSelectionPage.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/export/ModpackInfoPage.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/export/ModpackTypeSelectionPage.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/main/MainPage.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/main/RootPage.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/main/SettingsPage.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/main/SettingsView.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/profile/ProfileAdvancedListItem.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/profile/ProfileList.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/profile/ProfileListItem.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/profile/ProfileListItemSkin.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/profile/ProfilePage.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/versions/DatapackListPage.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/versions/DatapackListPageSkin.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/versions/GameAdvancedListItem.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/versions/GameItem.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/versions/GameItemSkin.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/versions/GameList.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/versions/GameListItem.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/versions/GameListItemSkin.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/versions/InstallerListPage.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/versions/ModListPage.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/versions/ModListPageSkin.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/versions/VersionPage.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/versions/VersionSettingsPage.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/versions/Versions.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/versions/WorldExportPage.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/versions/WorldExportPageSkin.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/versions/WorldListItem.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/versions/WorldListItemSkin.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/versions/WorldListPage.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/wizard/AbstractWizardDisplayer.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/wizard/Navigation.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/wizard/Refreshable.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/wizard/SinglePageWizardProvider.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/wizard/Summary.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/wizard/TaskExecutorDialogWizardDisplayer.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/wizard/WizardController.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/wizard/WizardDisplayer.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/wizard/WizardNavigationResult.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/wizard/WizardPage.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/wizard/WizardProvider.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/ui/wizard/WizardSinglePage.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/upgrade/ExecutableHeaderHelper.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/upgrade/HMCLDownloadTask.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/upgrade/IntegrityChecker.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/upgrade/RemoteVersion.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/upgrade/UpdateChannel.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/upgrade/UpdateChecker.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/upgrade/UpdateHandler.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/util/CrashReporter.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/util/ResourceNotFoundError.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/util/i18n/I18n.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/util/i18n/Locales.java
+ D HMCL/src/main/java/org/jackhuang/hmcl/util/i18n/UTF8Control.java
+ D HMCL/src/main/resources/assets/css/blue.css
+ D HMCL/src/main/resources/assets/css/custom.css
+ D HMCL/src/main/resources/assets/css/root.css
+ D HMCL/src/main/resources/assets/fxml/account-add.fxml
+ D HMCL/src/main/resources/assets/fxml/account-login.fxml
+ D HMCL/src/main/resources/assets/fxml/account.fxml
+ D HMCL/src/main/resources/assets/fxml/authlib-injector-server-add.fxml
+ D HMCL/src/main/resources/assets/fxml/download/additional-installers.fxml
+ D HMCL/src/main/resources/assets/fxml/download/modpack-source.fxml
+ D HMCL/src/main/resources/assets/fxml/download/modpack.fxml
+ D HMCL/src/main/resources/assets/fxml/download/versions-list-item.fxml
+ D HMCL/src/main/resources/assets/fxml/download/versions.fxml
+ D HMCL/src/main/resources/assets/fxml/input-dialog.fxml
+ D HMCL/src/main/resources/assets/fxml/message-dialog.fxml
+ D HMCL/src/main/resources/assets/fxml/modpack/selection.fxml
+ D HMCL/src/main/resources/assets/fxml/modpack/type.fxml
+ D HMCL/src/main/resources/assets/fxml/profile.fxml
+ D HMCL/src/main/resources/assets/fxml/task-dialog.fxml
+ D HMCL/src/main/resources/assets/fxml/version/version-settings.fxml
+ D HMCL/src/main/resources/assets/hmcl_signature_publickey.der
+ D HMCL/src/main/resources/assets/img/alex.png
+ D HMCL/src/main/resources/assets/img/background.jpg
+ D HMCL/src/main/resources/assets/img/bookshelf.png
+ D HMCL/src/main/resources/assets/img/chicken.png
+ D HMCL/src/main/resources/assets/img/command.png
+ D HMCL/src/main/resources/assets/img/craft_table.png
+ D HMCL/src/main/resources/assets/img/fabric.png
+ D HMCL/src/main/resources/assets/img/forge.png
+ D HMCL/src/main/resources/assets/img/furnace.png
+ D HMCL/src/main/resources/assets/img/grass.png
+ D HMCL/src/main/resources/assets/img/icon.png
+ D HMCL/src/main/resources/assets/img/steve.png
+ D HMCL/src/main/resources/assets/img/welcome.png
+ D HMCL/src/main/resources/assets/lang/I18N.properties
+ D HMCL/src/main/resources/assets/lang/I18N_es.properties
+ D HMCL/src/main/resources/assets/lang/I18N_ru.properties
+ D HMCL/src/main/resources/assets/lang/I18N_zh.properties
+ D HMCL/src/main/resources/assets/lang/I18N_zh_CN.properties
+ D HMCL/src/main/resources/assets/lekeystore.jks
+ D HMCL/src/main/resources/assets/svg/arrow-left.fxml
+ D HMCL/src/main/resources/assets/svg/arrow-right.fxml
+ D HMCL/src/main/resources/assets/svg/close-black.fxml
+ D HMCL/src/main/resources/assets/svg/close.fxml
+ D HMCL/src/main/resources/assets/svg/folder-open.fxml
+ D HMCL/src/main/resources/assets/svg/gear.fxml
+ D HMCL/src/main/resources/assets/svg/plus.fxml
+ D HMCL/src/main/resources/assets/svg/refresh.fxml
+ D HMCL/src/main/resources/assets/svg/wrench-white.fxml
+ D HMCL/welcome_page.png
+ D HMCLCore/build.gradle
+ D HMCLCore/gradle/wrapper/gradle-wrapper.jar
+ D HMCLCore/gradle/wrapper/gradle-wrapper.properties
+ D HMCLCore/gradlew
+ D HMCLCore/gradlew.bat
+ D HMCLCore/settings.gradle
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/Account.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/AccountFactory.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/AuthInfo.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/AuthenticationException.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/CharacterDeletedException.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/CharacterSelector.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/CredentialExpiredException.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/NoCharacterException.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/NoSelectedCharacterException.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/ServerDisconnectException.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/ServerResponseMalformedException.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/authlibinjector/AuthlibInjectorAccount.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/authlibinjector/AuthlibInjectorAccountFactory.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/authlibinjector/AuthlibInjectorArtifactInfo.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/authlibinjector/AuthlibInjectorArtifactProvider.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/authlibinjector/AuthlibInjectorDnD.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/authlibinjector/AuthlibInjectorDownloadException.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/authlibinjector/AuthlibInjectorDownloader.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/authlibinjector/AuthlibInjectorProvider.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/authlibinjector/AuthlibInjectorServer.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/authlibinjector/SimpleAuthlibInjectorArtifactProvider.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/offline/OfflineAccount.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/offline/OfflineAccountFactory.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/CompleteGameProfile.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/GameProfile.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/MojangYggdrasilProvider.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/PropertyMapSerializer.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/RemoteAuthenticationException.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/Texture.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/TextureModel.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/TextureType.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/User.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/YggdrasilAccount.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/YggdrasilAccountFactory.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/YggdrasilProvider.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/YggdrasilService.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/auth/yggdrasil/YggdrasilSession.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/AbstractDependencyManager.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/AdaptedDownloadProvider.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/ArtifactMalformedException.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/BMCLAPIDownloadProvider.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/DefaultCacheRepository.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/DefaultDependencyManager.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/DefaultGameBuilder.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/DependencyManager.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/DownloadProvider.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/GameBuilder.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/LibraryAnalyzer.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/MaintainTask.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/MojangDownloadProvider.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/RemoteVersion.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/VersionList.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/VersionMismatchException.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/fabric/FabricInstallTask.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/fabric/FabricRemoteVersion.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/fabric/FabricVersionList.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/forge/ForgeBMCLVersionList.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/forge/ForgeInstall.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/forge/ForgeInstallProfile.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/forge/ForgeInstallTask.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/forge/ForgeNewInstallProfile.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/forge/ForgeNewInstallTask.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/forge/ForgeOldInstallTask.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/forge/ForgeRemoteVersion.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/forge/ForgeVersion.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/forge/ForgeVersionList.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/forge/ForgeVersionRoot.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/game/GameAssetDownloadTask.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/game/GameAssetIndexDownloadTask.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/game/GameDownloadTask.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/game/GameInstallTask.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/game/GameLibrariesTask.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/game/GameRemoteLatestVersions.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/game/GameRemoteVersion.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/game/GameRemoteVersionInfo.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/game/GameRemoteVersions.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/game/GameVerificationFixTask.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/game/GameVersionList.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/game/LibraryDownloadException.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/game/LibraryDownloadTask.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/game/VersionJsonDownloadTask.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/game/VersionJsonSaveTask.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/liteloader/LiteLoaderBMCLVersionList.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/liteloader/LiteLoaderBranch.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/liteloader/LiteLoaderGameVersions.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/liteloader/LiteLoaderInstallTask.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/liteloader/LiteLoaderRemoteVersion.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/liteloader/LiteLoaderRepository.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/liteloader/LiteLoaderVersion.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/liteloader/LiteLoaderVersionList.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/liteloader/LiteLoaderVersionsMeta.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/liteloader/LiteLoaderVersionsRoot.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/optifine/OptiFineBMCLVersionList.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/optifine/OptiFineInstallTask.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/optifine/OptiFineRemoteVersion.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/download/optifine/OptiFineVersion.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/event/Event.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/event/EventBus.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/event/EventManager.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/event/EventPriority.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/event/FailedEvent.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/event/GameJsonParseFailedEvent.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/event/JVMLaunchFailedEvent.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/event/LoadedOneVersionEvent.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/event/ProcessExitedAbnormallyEvent.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/event/ProcessStoppedEvent.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/event/RefreshedVersionsEvent.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/event/RefreshingVersionsEvent.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/event/RemoveVersionEvent.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/event/RenameVersionEvent.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/game/Argument.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/game/Arguments.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/game/Artifact.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/game/AssetIndex.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/game/AssetIndexInfo.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/game/AssetObject.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/game/ClassicLibrary.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/game/ClassicVersion.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/game/CompatibilityRule.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/game/DefaultGameRepository.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/game/DownloadInfo.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/game/DownloadType.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/game/ExtractRules.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/game/GameDirectoryType.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/game/GameException.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/game/GameRepository.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/game/GameVersion.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/game/IdDownloadInfo.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/game/LaunchOptions.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/game/LibrariesDownloadInfo.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/game/Library.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/game/LibraryDownloadInfo.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/game/LoggingInfo.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/game/OSRestriction.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/game/ReleaseType.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/game/RuledArgument.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/game/SimpleVersionProvider.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/game/StringArgument.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/game/Version.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/game/VersionLibraryBuilder.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/game/VersionNotFoundException.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/game/VersionProvider.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/game/World.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/launch/DefaultLauncher.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/launch/ExitWaiter.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/launch/Launcher.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/launch/NotDecompressingNativesException.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/launch/PermissionException.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/launch/ProcessCreationException.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/launch/ProcessListener.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/launch/StreamPump.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/Datapack.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/FabricModMetadata.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/ForgeModMetadata.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/LiteModMetadata.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/MinecraftInstanceTask.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/MismatchedModpackTypeException.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/ModAdviser.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/ModInfo.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/ModManager.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/Modpack.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/ModpackConfiguration.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/ModpackInstallTask.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/ModpackUpdateTask.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/PackMcMeta.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/UnsupportedModpackException.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/curse/CurseCompletionException.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/curse/CurseCompletionTask.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/curse/CurseInstallTask.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/curse/CurseManifest.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/curse/CurseManifestFile.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/curse/CurseManifestMinecraft.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/curse/CurseManifestModLoader.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/curse/CurseMetaMod.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/multimc/MultiMCInstanceConfiguration.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/multimc/MultiMCInstancePatch.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/multimc/MultiMCManifest.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/multimc/MultiMCModpackExportTask.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/multimc/MultiMCModpackInstallTask.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/server/ServerModpackCompletionTask.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/server/ServerModpackExportTask.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/server/ServerModpackLocalInstallTask.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/server/ServerModpackManifest.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/mod/server/ServerModpackRemoteInstallTask.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/task/AsyncTaskExecutor.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/task/CancellableTaskExecutor.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/task/DownloadException.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/task/FetchTask.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/task/FileDownloadTask.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/task/GetTask.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/task/Schedulers.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/task/Task.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/task/TaskEvent.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/task/TaskExecutor.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/task/TaskListener.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/CacheRepository.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/Constants.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/DigestUtils.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/FutureCallback.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/Hex.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/Immutable.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/InvocationDispatcher.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/Lang.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/Log4jLevel.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/Logging.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/Pair.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/ReflectionHelper.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/SimpleMultimap.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/StringUtils.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/ToStringBuilder.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/function/ExceptionalBiConsumer.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/function/ExceptionalBiFunction.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/function/ExceptionalConsumer.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/function/ExceptionalFunction.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/function/ExceptionalPredicate.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/function/ExceptionalRunnable.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/function/ExceptionalSupplier.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/gson/DateTypeAdapter.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/gson/EnumOrdinalDeserializer.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/gson/FileTypeAdapter.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/gson/JsonMap.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/gson/JsonUtils.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/gson/LowerCaseEnumTypeAdapterFactory.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/gson/TolerableValidationException.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/gson/UUIDTypeAdapter.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/gson/Validation.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/gson/ValidationTypeAdapterFactory.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/io/ChecksumMismatchException.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/io/CompressingUtils.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/io/FileUtils.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/io/HttpMultipartRequest.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/io/IOUtils.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/io/JarUtils.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/io/NetworkUtils.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/io/ResponseCodeException.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/io/Unzipper.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/io/Zipper.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/javafx/AutomatedToggleGroup.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/javafx/BindingMapping.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/javafx/ExtendedProperties.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/javafx/MappedObservableList.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/javafx/MappedProperty.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/javafx/ObservableCache.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/javafx/ObservableHelper.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/javafx/ObservableOptionalCache.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/javafx/PropertyUtils.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/javafx/ReadWriteComposedProperty.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/javafx/ReferenceHolder.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/javafx/SafeStringConverter.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/platform/CommandBuilder.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/platform/JavaVersion.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/platform/ManagedProcess.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/platform/OperatingSystem.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/platform/Platform.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/platform/SystemUtils.java
+ D HMCLCore/src/main/java/org/jackhuang/hmcl/util/versioning/VersionNumber.java
+ D HMCLCore/src/main/resources/assets/game/HMCLTransformerDiscoveryService-1.0.jar
+ D HMCLCore/src/test/java/org/jackhuang/hmcl/util/TaskTest.java
+ D HMCLCore/src/test/java/org/jackhuang/hmcl/util/VersionNumberTest.java
+ D HMCLTransformerDiscoveryService/build.gradle
+ D HMCLTransformerDiscoveryService/lib/modlauncher-4.1.0.jar
+ D HMCLTransformerDiscoveryService/src/main/java/org/jackhuang/hmcl/HMCLTransformerDiscoveryService.java
+ D HMCLTransformerDiscoveryService/src/main/resources/META-INF/services/cpw.mods.modlauncher.serviceapi.ITransformerDiscoveryService
+ D HMCLauncher/.gitignore
+ D HMCLauncher/HMCL/HMCL.APS
+ D HMCLauncher/HMCL/HMCL.ico
+ D HMCLauncher/HMCL/HMCL.rc
+ D HMCLauncher/HMCL/HMCL.vcxproj
+ D HMCLauncher/HMCL/HMCL.vcxproj.filters
+ D HMCLauncher/HMCL/HMCL.vcxproj.user
+ D HMCLauncher/HMCL/Version.cpp
+ D HMCLauncher/HMCL/Version.h
+ D HMCLauncher/HMCL/java.cpp
+ D HMCLauncher/HMCL/java.h
+ D HMCLauncher/HMCL/lang.h
+ D HMCLauncher/HMCL/main.cpp
+ D HMCLauncher/HMCL/main.h
+ D HMCLauncher/HMCL/os.cpp
+ D HMCLauncher/HMCL/os.h
+ D HMCLauncher/HMCL/resource.h
+ D HMCLauncher/HMCL/stdafx.cpp
+ D HMCLauncher/HMCL/stdafx.h
+ D HMCLauncher/HMCL/targetver.h
+ D HMCLauncher/HMCLauncher.sln
+M  README.md
+A  XMCL/.travis.yml
+A  XMCL/build.gradle
+A  XMCL/settings.gradle
+A  XMCL/src/main/java/org/efl/xmcl/Launcher.java
+A  XMCL/src/main/java/org/efl/xmcl/Main.java
+A  XMCL/src/main/java/org/efl/xmcl/Metadata.java
+A  XMCL/src/main/java/org/efl/xmcl/game/LauncherHelper.java
+A  XMCL/src/main/java/org/efl/xmcl/game/LoadingState.java
+A  XMCL/src/main/java/org/efl/xmcl/game/ModpackHelper.java
+A  XMCL/src/main/java/org/efl/xmcl/game/MultiMCInstallVersionSettingTask.java
+A  XMCL/src/main/java/org/efl/xmcl/game/TexturesLoader.java
+A  XMCL/src/main/java/org/efl/xmcl/game/XMCLCacheRepository.java
+A  XMCL/src/main/java/org/efl/xmcl/game/XMCLGameLauncher.java
+A  XMCL/src/main/java/org/efl/xmcl/game/XMCLGameRepository.java
+A  XMCL/src/main/java/org/efl/xmcl/game/XMCLModpackExportTask.java
+A  XMCL/src/main/java/org/efl/xmcl/game/XMCLModpackInstallTask.java
+A  XMCL/src/main/java/org/efl/xmcl/game/XMCLModpackManager.java
+A  XMCL/src/main/java/org/efl/xmcl/game/XMCLModpackManifest.java
+A  XMCL/src/main/java/org/efl/xmcl/setting/Accounts.java
+A  XMCL/src/main/java/org/efl/xmcl/setting/AuthlibInjectorServers.java
+A  XMCL/src/main/java/org/efl/xmcl/setting/Config.java
+A  XMCL/src/main/java/org/efl/xmcl/setting/ConfigHolder.java
+A  XMCL/src/main/java/org/efl/xmcl/setting/ConfigUpgrader.java
+A  XMCL/src/main/java/org/efl/xmcl/setting/DownloadProviders.java
+A  XMCL/src/main/java/org/efl/xmcl/setting/EnumBackgroundImage.java
+A  XMCL/src/main/java/org/efl/xmcl/setting/EnumCommonDirectory.java
+A  XMCL/src/main/java/org/efl/xmcl/setting/LauncherVisibility.java
+A  XMCL/src/main/java/org/efl/xmcl/setting/Profile.java
+A  XMCL/src/main/java/org/efl/xmcl/setting/Profiles.java
+A  XMCL/src/main/java/org/efl/xmcl/setting/ProxyManager.java
+A  XMCL/src/main/java/org/efl/xmcl/setting/Settings.java
+A  XMCL/src/main/java/org/efl/xmcl/setting/Theme.java
+A  XMCL/src/main/java/org/efl/xmcl/setting/VersionSetting.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/Controllers.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/CrashWindow.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/DialogController.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/FXUtils.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/InstallerItem.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/ListPage.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/ListPageBase.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/ListPageSkin.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/LogWindow.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/SVG.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/ToolbarListPageSkin.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/UpgradeDialog.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/WeakListenerHolder.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/WebStage.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/account/AccountAdvancedListItem.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/account/AccountList.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/account/AccountListItem.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/account/AccountListItemSkin.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/account/AccountLoginPane.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/account/AddAccountPane.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/account/AddAuthlibInjectorServerPane.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/account/AuthlibInjectorServerItem.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/account/AuthlibInjectorServersPage.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/animation/AnimationHandler.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/animation/AnimationProducer.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/animation/ContainerAnimations.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/animation/TransitionPane.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/construct/AdvancedListBox.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/construct/AdvancedListItem.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/construct/AdvancedListItemSkin.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/construct/ClassTitle.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/construct/ComponentList.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/construct/ComponentListCell.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/construct/ComponentSublist.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/construct/DialogAware.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/construct/DialogCloseEvent.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/construct/FileItem.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/construct/FloatListCell.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/construct/FloatScrollBarSkin.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/construct/FontComboBox.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/construct/IconedItem.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/construct/IconedMenuItem.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/construct/ImagePickerItem.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/construct/InputDialogPane.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/construct/MenuSeparator.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/construct/MessageDialogPane.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/construct/MultiColorItem.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/construct/MultiFileItem.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/construct/Navigator.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/construct/NoneMultipleSelectionModel.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/construct/NumberValidator.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/construct/PageCloseEvent.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/construct/PopupMenu.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/construct/PromptDialogPane.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/construct/RipplerContainer.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/construct/SpinnerPane.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/construct/StackContainerPane.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/construct/TabControl.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/construct/TabHeader.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/construct/TaskExecutorDialogPane.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/construct/TaskListPane.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/construct/TwoLineListItem.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/construct/Validator.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/decorator/Decorator.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/decorator/DecoratorController.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/decorator/DecoratorNavigatorPage.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/decorator/DecoratorPage.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/decorator/DecoratorSkin.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/decorator/DecoratorTabPage.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/decorator/DecoratorTransitionPage.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/decorator/DecoratorWizardDisplayer.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/download/AdditionalInstallersPage.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/download/InstallerWizardDownloadProvider.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/download/InstallersPage.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/download/LocalModpackPage.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/download/ModpackInstallWizardProvider.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/download/ModpackSelectionPage.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/download/RemoteModpackPage.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/download/UpdateInstallerWizardProvider.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/download/VanillaInstallWizardProvider.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/download/VersionsPage.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/export/ExportWizardProvider.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/export/ModpackFileSelectionPage.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/export/ModpackInfoPage.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/export/ModpackTypeSelectionPage.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/main/MainPage.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/main/RootPage.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/main/SettingsPage.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/main/SettingsView.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/profile/ProfileAdvancedListItem.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/profile/ProfileList.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/profile/ProfileListItem.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/profile/ProfileListItemSkin.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/profile/ProfilePage.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/versions/DatapackListPage.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/versions/DatapackListPageSkin.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/versions/GameAdvancedListItem.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/versions/GameItem.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/versions/GameItemSkin.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/versions/GameList.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/versions/GameListItem.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/versions/GameListItemSkin.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/versions/InstallerListPage.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/versions/ModListPage.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/versions/ModListPageSkin.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/versions/VersionPage.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/versions/VersionSettingsPage.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/versions/Versions.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/versions/WorldExportPage.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/versions/WorldExportPageSkin.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/versions/WorldListItem.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/versions/WorldListItemSkin.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/versions/WorldListPage.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/wizard/AbstractWizardDisplayer.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/wizard/Navigation.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/wizard/Refreshable.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/wizard/SinglePageWizardProvider.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/wizard/Summary.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/wizard/TaskExecutorDialogWizardDisplayer.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/wizard/WizardController.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/wizard/WizardDisplayer.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/wizard/WizardNavigationResult.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/wizard/WizardPage.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/wizard/WizardProvider.java
+A  XMCL/src/main/java/org/efl/xmcl/ui/wizard/WizardSinglePage.java
+A  XMCL/src/main/java/org/efl/xmcl/upgrade/ExecutableHeaderHelper.java
+A  XMCL/src/main/java/org/efl/xmcl/upgrade/IntegrityChecker.java
+A  XMCL/src/main/java/org/efl/xmcl/upgrade/RemoteVersion.java
+A  XMCL/src/main/java/org/efl/xmcl/upgrade/UpdateChannel.java
+A  XMCL/src/main/java/org/efl/xmcl/upgrade/UpdateChecker.java
+A  XMCL/src/main/java/org/efl/xmcl/upgrade/UpdateHandler.java
+A  XMCL/src/main/java/org/efl/xmcl/upgrade/XMCLDownloadTask.java
+A  XMCL/src/main/java/org/efl/xmcl/util/CrashReporter.java
+A  XMCL/src/main/java/org/efl/xmcl/util/ResourceNotFoundError.java
+A  XMCL/src/main/java/org/efl/xmcl/util/i18n/I18n.java
+A  XMCL/src/main/java/org/efl/xmcl/util/i18n/Locales.java
+A  XMCL/src/main/java/org/efl/xmcl/util/i18n/UTF8Control.java
+A  XMCL/src/main/resources/assets/XMCL_signature_publickey.der
+A  XMCL/src/main/resources/assets/css/blue.css
+A  XMCL/src/main/resources/assets/css/custom.css
+A  XMCL/src/main/resources/assets/css/root.css
+A  XMCL/src/main/resources/assets/fxml/account-add.fxml
+A  XMCL/src/main/resources/assets/fxml/account-login.fxml
+A  XMCL/src/main/resources/assets/fxml/account.fxml
+A  XMCL/src/main/resources/assets/fxml/authlib-injector-server-add.fxml
+A  XMCL/src/main/resources/assets/fxml/download/additional-installers.fxml
+A  XMCL/src/main/resources/assets/fxml/download/modpack-source.fxml
+A  XMCL/src/main/resources/assets/fxml/download/modpack.fxml
+A  XMCL/src/main/resources/assets/fxml/download/versions-list-item.fxml
+A  XMCL/src/main/resources/assets/fxml/download/versions.fxml
+A  XMCL/src/main/resources/assets/fxml/input-dialog.fxml
+A  XMCL/src/main/resources/assets/fxml/message-dialog.fxml
+A  XMCL/src/main/resources/assets/fxml/modpack/selection.fxml
+A  XMCL/src/main/resources/assets/fxml/modpack/type.fxml
+A  XMCL/src/main/resources/assets/fxml/profile.fxml
+A  XMCL/src/main/resources/assets/fxml/task-dialog.fxml
+A  XMCL/src/main/resources/assets/fxml/version/version-settings.fxml
+A  XMCL/src/main/resources/assets/img/alex.png
+A  XMCL/src/main/resources/assets/img/background.jpg
+A  XMCL/src/main/resources/assets/img/bookshelf.png
+A  XMCL/src/main/resources/assets/img/chicken.png
+A  XMCL/src/main/resources/assets/img/command.png
+A  XMCL/src/main/resources/assets/img/craft_table.png
+A  XMCL/src/main/resources/assets/img/fabric.png
+A  XMCL/src/main/resources/assets/img/forge.png
+A  XMCL/src/main/resources/assets/img/furnace.png
+A  XMCL/src/main/resources/assets/img/grass.png
+A  XMCL/src/main/resources/assets/img/icon.png
+A  XMCL/src/main/resources/assets/img/steve.png
+A  XMCL/src/main/resources/assets/img/welcome.png
+A  XMCL/src/main/resources/assets/lang/I18N.properties
+A  XMCL/src/main/resources/assets/lang/I18N_es.properties
+A  XMCL/src/main/resources/assets/lang/I18N_ru.properties
+A  XMCL/src/main/resources/assets/lang/I18N_zh.properties
+A  XMCL/src/main/resources/assets/lang/I18N_zh_CN.properties
+A  XMCL/src/main/resources/assets/lekeystore.jks
+A  XMCL/src/main/resources/assets/svg/arrow-left.fxml
+A  XMCL/src/main/resources/assets/svg/arrow-right.fxml
+A  XMCL/src/main/resources/assets/svg/close-black.fxml
+A  XMCL/src/main/resources/assets/svg/close.fxml
+A  XMCL/src/main/resources/assets/svg/folder-open.fxml
+A  XMCL/src/main/resources/assets/svg/gear.fxml
+A  XMCL/src/main/resources/assets/svg/plus.fxml
+A  XMCL/src/main/resources/assets/svg/refresh.fxml
+A  XMCL/src/main/resources/assets/svg/wrench-white.fxml
+A  XMCL/welcome_page.png
+A  XMCLCore/build.gradle
+A  XMCLCore/gradle/wrapper/gradle-wrapper.jar
+A  XMCLCore/gradle/wrapper/gradle-wrapper.properties
+A  XMCLCore/gradlew
+A  XMCLCore/gradlew.bat
+A  XMCLCore/settings.gradle
+A  XMCLCore/src/main/java/org/efl/xmcl/auth/Account.java
+A  XMCLCore/src/main/java/org/efl/xmcl/auth/AccountFactory.java
+A  XMCLCore/src/main/java/org/efl/xmcl/auth/AuthInfo.java
+A  XMCLCore/src/main/java/org/efl/xmcl/auth/AuthenticationException.java
+A  XMCLCore/src/main/java/org/efl/xmcl/auth/CharacterDeletedException.java
+A  XMCLCore/src/main/java/org/efl/xmcl/auth/CharacterSelector.java
+A  XMCLCore/src/main/java/org/efl/xmcl/auth/CredentialExpiredException.java
+A  XMCLCore/src/main/java/org/efl/xmcl/auth/NoCharacterException.java
+A  XMCLCore/src/main/java/org/efl/xmcl/auth/NoSelectedCharacterException.java
+A  XMCLCore/src/main/java/org/efl/xmcl/auth/ServerDisconnectException.java
+A  XMCLCore/src/main/java/org/efl/xmcl/auth/ServerResponseMalformedException.java
+A  XMCLCore/src/main/java/org/efl/xmcl/auth/authlibinjector/AuthlibInjectorAccount.java
+A  XMCLCore/src/main/java/org/efl/xmcl/auth/authlibinjector/AuthlibInjectorAccountFactory.java
+A  XMCLCore/src/main/java/org/efl/xmcl/auth/authlibinjector/AuthlibInjectorArtifactInfo.java
+A  XMCLCore/src/main/java/org/efl/xmcl/auth/authlibinjector/AuthlibInjectorArtifactProvider.java
+A  XMCLCore/src/main/java/org/efl/xmcl/auth/authlibinjector/AuthlibInjectorDnD.java
+A  XMCLCore/src/main/java/org/efl/xmcl/auth/authlibinjector/AuthlibInjectorDownloadException.java
+A  XMCLCore/src/main/java/org/efl/xmcl/auth/authlibinjector/AuthlibInjectorDownloader.java
+A  XMCLCore/src/main/java/org/efl/xmcl/auth/authlibinjector/AuthlibInjectorProvider.java
+A  XMCLCore/src/main/java/org/efl/xmcl/auth/authlibinjector/AuthlibInjectorServer.java
+A  XMCLCore/src/main/java/org/efl/xmcl/auth/authlibinjector/SimpleAuthlibInjectorArtifactProvider.java
+A  XMCLCore/src/main/java/org/efl/xmcl/auth/offline/OfflineAccount.java
+A  XMCLCore/src/main/java/org/efl/xmcl/auth/offline/OfflineAccountFactory.java
+A  XMCLCore/src/main/java/org/efl/xmcl/auth/yggdrasil/CompleteGameProfile.java
+A  XMCLCore/src/main/java/org/efl/xmcl/auth/yggdrasil/GameProfile.java
+A  XMCLCore/src/main/java/org/efl/xmcl/auth/yggdrasil/MojangYggdrasilProvider.java
+A  XMCLCore/src/main/java/org/efl/xmcl/auth/yggdrasil/PropertyMapSerializer.java
+A  XMCLCore/src/main/java/org/efl/xmcl/auth/yggdrasil/RemoteAuthenticationException.java
+A  XMCLCore/src/main/java/org/efl/xmcl/auth/yggdrasil/Texture.java
+A  XMCLCore/src/main/java/org/efl/xmcl/auth/yggdrasil/TextureModel.java
+A  XMCLCore/src/main/java/org/efl/xmcl/auth/yggdrasil/TextureType.java
+A  XMCLCore/src/main/java/org/efl/xmcl/auth/yggdrasil/User.java
+A  XMCLCore/src/main/java/org/efl/xmcl/auth/yggdrasil/YggdrasilAccount.java
+A  XMCLCore/src/main/java/org/efl/xmcl/auth/yggdrasil/YggdrasilAccountFactory.java
+A  XMCLCore/src/main/java/org/efl/xmcl/auth/yggdrasil/YggdrasilProvider.java
+A  XMCLCore/src/main/java/org/efl/xmcl/auth/yggdrasil/YggdrasilService.java
+A  XMCLCore/src/main/java/org/efl/xmcl/auth/yggdrasil/YggdrasilSession.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/AbstractDependencyManager.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/AdaptedDownloadProvider.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/ArtifactMalformedException.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/BMCLAPIDownloadProvider.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/DefaultCacheRepository.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/DefaultDependencyManager.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/DefaultGameBuilder.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/DependencyManager.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/DownloadProvider.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/GameBuilder.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/LibraryAnalyzer.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/MaintainTask.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/MojangDownloadProvider.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/RemoteVersion.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/VersionList.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/VersionMismatchException.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/fabric/FabricInstallTask.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/fabric/FabricRemoteVersion.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/fabric/FabricVersionList.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/forge/ForgeBMCLVersionList.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/forge/ForgeInstall.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/forge/ForgeInstallProfile.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/forge/ForgeInstallTask.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/forge/ForgeNewInstallProfile.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/forge/ForgeNewInstallTask.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/forge/ForgeOldInstallTask.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/forge/ForgeRemoteVersion.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/forge/ForgeVersion.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/forge/ForgeVersionList.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/forge/ForgeVersionRoot.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/game/GameAssetDownloadTask.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/game/GameAssetIndexDownloadTask.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/game/GameDownloadTask.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/game/GameInstallTask.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/game/GameLibrariesTask.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/game/GameRemoteLatestVersions.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/game/GameRemoteVersion.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/game/GameRemoteVersionInfo.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/game/GameRemoteVersions.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/game/GameVerificationFixTask.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/game/GameVersionList.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/game/LibraryDownloadException.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/game/LibraryDownloadTask.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/game/VersionJsonDownloadTask.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/game/VersionJsonSaveTask.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/liteloader/LiteLoaderBMCLVersionList.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/liteloader/LiteLoaderBranch.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/liteloader/LiteLoaderGameVersions.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/liteloader/LiteLoaderInstallTask.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/liteloader/LiteLoaderRemoteVersion.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/liteloader/LiteLoaderRepository.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/liteloader/LiteLoaderVersion.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/liteloader/LiteLoaderVersionList.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/liteloader/LiteLoaderVersionsMeta.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/liteloader/LiteLoaderVersionsRoot.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/optifine/OptiFineBMCLVersionList.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/optifine/OptiFineInstallTask.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/optifine/OptiFineRemoteVersion.java
+A  XMCLCore/src/main/java/org/efl/xmcl/download/optifine/OptiFineVersion.java
+A  XMCLCore/src/main/java/org/efl/xmcl/event/Event.java
+A  XMCLCore/src/main/java/org/efl/xmcl/event/EventBus.java
+A  XMCLCore/src/main/java/org/efl/xmcl/event/EventManager.java
+A  XMCLCore/src/main/java/org/efl/xmcl/event/EventPriority.java
+A  XMCLCore/src/main/java/org/efl/xmcl/event/FailedEvent.java
+A  XMCLCore/src/main/java/org/efl/xmcl/event/GameJsonParseFailedEvent.java
+A  XMCLCore/src/main/java/org/efl/xmcl/event/JVMLaunchFailedEvent.java
+A  XMCLCore/src/main/java/org/efl/xmcl/event/LoadedOneVersionEvent.java
+A  XMCLCore/src/main/java/org/efl/xmcl/event/ProcessExitedAbnormallyEvent.java
+A  XMCLCore/src/main/java/org/efl/xmcl/event/ProcessStoppedEvent.java
+A  XMCLCore/src/main/java/org/efl/xmcl/event/RefreshedVersionsEvent.java
+A  XMCLCore/src/main/java/org/efl/xmcl/event/RefreshingVersionsEvent.java
+A  XMCLCore/src/main/java/org/efl/xmcl/event/RemoveVersionEvent.java
+A  XMCLCore/src/main/java/org/efl/xmcl/event/RenameVersionEvent.java
+A  XMCLCore/src/main/java/org/efl/xmcl/game/Argument.java
+A  XMCLCore/src/main/java/org/efl/xmcl/game/Arguments.java
+A  XMCLCore/src/main/java/org/efl/xmcl/game/Artifact.java
+A  XMCLCore/src/main/java/org/efl/xmcl/game/AssetIndex.java
+A  XMCLCore/src/main/java/org/efl/xmcl/game/AssetIndexInfo.java
+A  XMCLCore/src/main/java/org/efl/xmcl/game/AssetObject.java
+A  XMCLCore/src/main/java/org/efl/xmcl/game/ClassicLibrary.java
+A  XMCLCore/src/main/java/org/efl/xmcl/game/ClassicVersion.java
+A  XMCLCore/src/main/java/org/efl/xmcl/game/CompatibilityRule.java
+A  XMCLCore/src/main/java/org/efl/xmcl/game/DefaultGameRepository.java
+A  XMCLCore/src/main/java/org/efl/xmcl/game/DownloadInfo.java
+A  XMCLCore/src/main/java/org/efl/xmcl/game/DownloadType.java
+A  XMCLCore/src/main/java/org/efl/xmcl/game/ExtractRules.java
+A  XMCLCore/src/main/java/org/efl/xmcl/game/GameDirectoryType.java
+A  XMCLCore/src/main/java/org/efl/xmcl/game/GameException.java
+A  XMCLCore/src/main/java/org/efl/xmcl/game/GameRepository.java
+A  XMCLCore/src/main/java/org/efl/xmcl/game/GameVersion.java
+A  XMCLCore/src/main/java/org/efl/xmcl/game/IdDownloadInfo.java
+A  XMCLCore/src/main/java/org/efl/xmcl/game/LaunchOptions.java
+A  XMCLCore/src/main/java/org/efl/xmcl/game/LibrariesDownloadInfo.java
+A  XMCLCore/src/main/java/org/efl/xmcl/game/Library.java
+A  XMCLCore/src/main/java/org/efl/xmcl/game/LibraryDownloadInfo.java
+A  XMCLCore/src/main/java/org/efl/xmcl/game/LoggingInfo.java
+A  XMCLCore/src/main/java/org/efl/xmcl/game/OSRestriction.java
+A  XMCLCore/src/main/java/org/efl/xmcl/game/ReleaseType.java
+A  XMCLCore/src/main/java/org/efl/xmcl/game/RuledArgument.java
+A  XMCLCore/src/main/java/org/efl/xmcl/game/SimpleVersionProvider.java
+A  XMCLCore/src/main/java/org/efl/xmcl/game/StringArgument.java
+A  XMCLCore/src/main/java/org/efl/xmcl/game/Version.java
+A  XMCLCore/src/main/java/org/efl/xmcl/game/VersionLibraryBuilder.java
+A  XMCLCore/src/main/java/org/efl/xmcl/game/VersionNotFoundException.java
+A  XMCLCore/src/main/java/org/efl/xmcl/game/VersionProvider.java
+A  XMCLCore/src/main/java/org/efl/xmcl/game/World.java
+A  XMCLCore/src/main/java/org/efl/xmcl/launch/DefaultLauncher.java
+A  XMCLCore/src/main/java/org/efl/xmcl/launch/ExitWaiter.java
+A  XMCLCore/src/main/java/org/efl/xmcl/launch/Launcher.java
+A  XMCLCore/src/main/java/org/efl/xmcl/launch/NotDecompressingNativesException.java
+A  XMCLCore/src/main/java/org/efl/xmcl/launch/PermissionException.java
+A  XMCLCore/src/main/java/org/efl/xmcl/launch/ProcessCreationException.java
+A  XMCLCore/src/main/java/org/efl/xmcl/launch/ProcessListener.java
+A  XMCLCore/src/main/java/org/efl/xmcl/launch/StreamPump.java
+A  XMCLCore/src/main/java/org/efl/xmcl/mod/Datapack.java
+A  XMCLCore/src/main/java/org/efl/xmcl/mod/FabricModMetadata.java
+A  XMCLCore/src/main/java/org/efl/xmcl/mod/ForgeModMetadata.java
+A  XMCLCore/src/main/java/org/efl/xmcl/mod/LiteModMetadata.java
+A  XMCLCore/src/main/java/org/efl/xmcl/mod/MinecraftInstanceTask.java
+A  XMCLCore/src/main/java/org/efl/xmcl/mod/MismatchedModpackTypeException.java
+A  XMCLCore/src/main/java/org/efl/xmcl/mod/ModAdviser.java
+A  XMCLCore/src/main/java/org/efl/xmcl/mod/ModInfo.java
+A  XMCLCore/src/main/java/org/efl/xmcl/mod/ModManager.java
+A  XMCLCore/src/main/java/org/efl/xmcl/mod/Modpack.java
+A  XMCLCore/src/main/java/org/efl/xmcl/mod/ModpackConfiguration.java
+A  XMCLCore/src/main/java/org/efl/xmcl/mod/ModpackInstallTask.java
+A  XMCLCore/src/main/java/org/efl/xmcl/mod/ModpackUpdateTask.java
+A  XMCLCore/src/main/java/org/efl/xmcl/mod/PackMcMeta.java
+A  XMCLCore/src/main/java/org/efl/xmcl/mod/UnsupportedModpackException.java
+A  XMCLCore/src/main/java/org/efl/xmcl/mod/curse/CurseCompletionException.java
+A  XMCLCore/src/main/java/org/efl/xmcl/mod/curse/CurseCompletionTask.java
+A  XMCLCore/src/main/java/org/efl/xmcl/mod/curse/CurseInstallTask.java
+A  XMCLCore/src/main/java/org/efl/xmcl/mod/curse/CurseManifest.java
+A  XMCLCore/src/main/java/org/efl/xmcl/mod/curse/CurseManifestFile.java
+A  XMCLCore/src/main/java/org/efl/xmcl/mod/curse/CurseManifestMinecraft.java
+A  XMCLCore/src/main/java/org/efl/xmcl/mod/curse/CurseManifestModLoader.java
+A  XMCLCore/src/main/java/org/efl/xmcl/mod/curse/CurseMetaMod.java
+A  XMCLCore/src/main/java/org/efl/xmcl/mod/multimc/MultiMCInstanceConfiguration.java
+A  XMCLCore/src/main/java/org/efl/xmcl/mod/multimc/MultiMCInstancePatch.java
+A  XMCLCore/src/main/java/org/efl/xmcl/mod/multimc/MultiMCManifest.java
+A  XMCLCore/src/main/java/org/efl/xmcl/mod/multimc/MultiMCModpackExportTask.java
+A  XMCLCore/src/main/java/org/efl/xmcl/mod/multimc/MultiMCModpackInstallTask.java
+A  XMCLCore/src/main/java/org/efl/xmcl/mod/server/ServerModpackCompletionTask.java
+A  XMCLCore/src/main/java/org/efl/xmcl/mod/server/ServerModpackExportTask.java
+A  XMCLCore/src/main/java/org/efl/xmcl/mod/server/ServerModpackLocalInstallTask.java
+A  XMCLCore/src/main/java/org/efl/xmcl/mod/server/ServerModpackManifest.java
+A  XMCLCore/src/main/java/org/efl/xmcl/mod/server/ServerModpackRemoteInstallTask.java
+A  XMCLCore/src/main/java/org/efl/xmcl/task/AsyncTaskExecutor.java
+A  XMCLCore/src/main/java/org/efl/xmcl/task/DownloadException.java
+A  XMCLCore/src/main/java/org/efl/xmcl/task/FetchTask.java
+A  XMCLCore/src/main/java/org/efl/xmcl/task/FileDownloadTask.java
+A  XMCLCore/src/main/java/org/efl/xmcl/task/GetTask.java
+A  XMCLCore/src/main/java/org/efl/xmcl/task/Schedulers.java
+A  XMCLCore/src/main/java/org/efl/xmcl/task/Task.java
+A  XMCLCore/src/main/java/org/efl/xmcl/task/TaskEvent.java
+A  XMCLCore/src/main/java/org/efl/xmcl/task/TaskExecutor.java
+A  XMCLCore/src/main/java/org/efl/xmcl/task/TaskListener.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/CacheRepository.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/Constants.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/DigestUtils.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/FutureCallback.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/Hex.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/Immutable.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/InvocationDispatcher.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/Lang.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/Log4jLevel.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/Logging.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/Pair.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/ReflectionHelper.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/SimpleMultimap.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/StringUtils.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/ToStringBuilder.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/function/ExceptionalBiConsumer.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/function/ExceptionalBiFunction.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/function/ExceptionalConsumer.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/function/ExceptionalFunction.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/function/ExceptionalPredicate.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/function/ExceptionalRunnable.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/function/ExceptionalSupplier.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/gson/DateTypeAdapter.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/gson/EnumOrdinalDeserializer.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/gson/FileTypeAdapter.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/gson/JsonMap.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/gson/JsonUtils.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/gson/LowerCaseEnumTypeAdapterFactory.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/gson/TolerableValidationException.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/gson/UUIDTypeAdapter.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/gson/Validation.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/gson/ValidationTypeAdapterFactory.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/io/ChecksumMismatchException.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/io/CompressingUtils.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/io/FileUtils.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/io/HttpMultipartRequest.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/io/IOUtils.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/io/JarUtils.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/io/NetworkUtils.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/io/ResponseCodeException.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/io/Unzipper.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/io/Zipper.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/javafx/AutomatedToggleGroup.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/javafx/BindingMapping.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/javafx/ExtendedProperties.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/javafx/MappedObservableList.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/javafx/MappedProperty.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/javafx/ObservableCache.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/javafx/ObservableHelper.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/javafx/ObservableOptionalCache.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/javafx/PropertyUtils.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/javafx/ReadWriteComposedProperty.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/javafx/ReferenceHolder.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/javafx/SafeStringConverter.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/platform/CommandBuilder.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/platform/JavaVersion.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/platform/ManagedProcess.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/platform/OperatingSystem.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/platform/Platform.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/platform/SystemUtils.java
+A  XMCLCore/src/main/java/org/efl/xmcl/util/versioning/VersionNumber.java
+A  XMCLCore/src/main/resources/assets/game/XMCLTransformerDiscoveryService-1.0.jar
+A  XMCLCore/src/test/java/org/efl/xmcl/util/TaskTest.java
+A  XMCLCore/src/test/java/org/efl/xmcl/util/VersionNumberTest.java
+A  XMCLTransformerDiscoveryService/build.gradle
+A  XMCLTransformerDiscoveryService/lib/modlauncher-4.1.0.jar
+A  XMCLTransformerDiscoveryService/src/main/java/org/efl/xmcl/XMCLTransformerDiscoveryService.java
+A  XMCLTransformerDiscoveryService/src/main/resources/META-INF/services/cpw.mods.modlauncher.serviceapi.ITransformerDiscoveryService
+A  XMCLauncher/.gitignore
+A  XMCLauncher/XMCL/Version.cpp
+A  XMCLauncher/XMCL/Version.h
+A  XMCLauncher/XMCL/XMCL.APS
+A  XMCLauncher/XMCL/XMCL.ico
+A  XMCLauncher/XMCL/XMCL.rc
+A  XMCLauncher/XMCL/XMCL.vcxproj
+A  XMCLauncher/XMCL/XMCL.vcxproj.filters
+A  XMCLauncher/XMCL/XMCL.vcxproj.user
+A  XMCLauncher/XMCL/java.cpp
+A  XMCLauncher/XMCL/java.h
+A  XMCLauncher/XMCL/lang.h
+A  XMCLauncher/XMCL/main.cpp
+A  XMCLauncher/XMCL/main.h
+A  XMCLauncher/XMCL/os.cpp
+A  XMCLauncher/XMCL/os.h
+A  XMCLauncher/XMCL/resource.h
+A  XMCLauncher/XMCL/stdafx.cpp
+A  XMCLauncher/XMCL/stdafx.h
+A  XMCLauncher/XMCL/targetver.h
+A  XMCLauncher/XMCLauncher.sln
+M  build.gradle
+M  license-header.txt
+M  settings.gradle
+</code></pre><hr>
+<h3 id="code-change-">Code change 代码优化</h3>
+<p>该版本最主要的内容就是对代码结构进行统一更新了。在上方可以看到我们增加，删除了大量文件并对代码进行了很多格式化操作，并且让Java包名变得符合标准。更多内容请在<a href="https://github.com/ASStudioEFL/XMCL/">GitHub</a>查看代码。该版本内测中，需要下载请发邮件至<code>ass.efl@qq.com</code>索要或在<a href="https://wj.qq.com/s2/6909948/ab29/">XMCL内测调查卷</a>中填写问卷获取0.8.x全系列下载</p>
